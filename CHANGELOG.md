@@ -1,11 +1,11 @@
-# QB64 on Haiku (x86_64)
+# QB64 on RenkuOS Haiku (x86_64)
 
-This port adds Haiku as a first-class QB64 platform. The IDE, the BASIC
+This port adds RenkuOS / Haiku as a first-class QB64 platform. The IDE, the BASIC
 compiler and the generated executables all build natively on Haiku; no X11,
 no ALSA and no glibc assumptions are involved.
 
-**This branch is Haiku-only.** Windows, Linux and macOS build support has
-been removed; only Haiku x86_64 is built and supported. See
+**This branch is RekuOS/Haiku-only.** Windows, Linux and macOS build support has
+been removed; only RenkuOS / Haiku x86_64 is built and supported. See
 [Removed for the Haiku-only fork](#removed-for-the-haiku-only-fork).
 
 ## Requirements

@@ -1,0 +1,1 @@
+g++ -no-pie -w qbx.cpp -lopenal -lnetwork -o 

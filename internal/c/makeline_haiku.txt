@@ -1,0 +1,1 @@
+g++ -no-pie -w qbx.cpp -lGL -lGLU -lglut -lGLEW -lopenal -ldevice -lbe -lnetwork -o 

@@ -2,18 +2,20 @@
 
 ![githubstrip](https://user-images.githubusercontent.com/10699359/109433808-1026f580-79f1-11eb-9472-2d4180dff14c.png)
 
-QB64 is a modern extended BASIC+OpenGL language that retains QB4.5/QBasic compatibility and compiles native binaries for Haiku (x86_64). This branch is a Haiku-only fork.
+QB64 is a modern extended BASIC+OpenGL language that retains QB4.5/QBasic compatibility and compiles native binaries for Haiku (x86_64). This branch is a RenkuOS / Haiku-only fork.
+
+originally forked from from [QB64Team/qb64](https://github.com/QB64Team/qb64). Yes, this is the abandoned original version, not the 
+live QB64PE fork. QB64PE demanded versions of glut etc that Haiku didn't have yet. Once this port is stable 
+we will look at incorporating changes and fixes from that fork.
 
 # Table of Contents
 1. [Installation](#Installation)
     1. [Haiku](#Haiku)
 2.  [Usage](#Usage)
-3.  [Additional Info](#Additional_Info)
 
 # Installation <a name="Installation"></a>
 
-QB64 on this branch builds natively on Haiku x86_64 only; there are no prebuilt
-packages, build from source as described below.
+QB64 on this branch builds natively on RenkuOS / Haiku x86_64 only
 
 <a name="Haiku"></a>
 ## Haiku
@@ -43,22 +45,11 @@ Run the QB64 executable to launch the IDE, which you can use to edit your .BAS f
 
 To generate a binary without running it, hit F11.
 
-Additionally, if you do not wish to use the integrated IDE and to only compile your program, you can use the following command-line calls:
+We have the retro IDE because it is cool. But you don't need it. You can write QB64 programs with any text editor and compile from Terminal.
+If you do not wish to use the integrated IDE and to only compile your program, you can use the following command-line calls:
 
-```qb64 -c yourfile.bas```
+```qb64 -x yourfile.bas```
 
-```qb64 -c yourfile.bas -o outputname.exe```
+```qb64 -x yourfile.bas -o outputname```
 
-Replacing `-c` with `-x` will compile without opening a separate compiler window.
-
-
-<a name="Additional_Info"></a>
-# Additional Information
-
-More about QB64 at our wiki: https://wiki.qb64.org
-
-We have a community forum at: https://forum.qb64.org
-
-We tweet from [@QB64Team](https://twitter.com/QB64team)
-
-Find us on Discord: https://discord.qb64.org
+When doing this, QB64 really appreciates getting the entire pathname. This can be doen easily by dragging the .bas file into the Terminal window.
