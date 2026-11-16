@@ -4,8 +4,10 @@
 
 QB64 is a modern extended BASIC+OpenGL language that retains QB4.5/QBasic compatibility and compiles native binaries for Haiku (x86_64). This branch is a RenkuOS / Haiku-only fork.
 
+[![qb64.png](https://i.postimg.cc/SRNqQgk6/qb64.png)](https://postimg.cc/qhYWjXtq)
+
 originally forked from from [QB64Team/qb64](https://github.com/QB64Team/qb64). Yes, this is the abandoned original version, not the 
-live QB64PE fork. QB64PE demanded versions of glut etc that Haiku didn't have yet. Once this port is stable 
+lively QB64PE fork. QB64PE demanded versions of glut etc. that Haiku/RenkuOS didn't have yet. Once this port is stable 
 we will look at incorporating changes and fixes from that fork.
 
 # Table of Contents
