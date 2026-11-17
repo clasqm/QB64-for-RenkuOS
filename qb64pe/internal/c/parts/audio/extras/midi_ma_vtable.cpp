@@ -50,7 +50,7 @@ extern "C" {
 #   define SOUNDFONT_BIN binary_soundfont_sf2_start
 #   define SOUNDFONT_SIZE (binary_soundfont_sf2_end - binary_soundfont_sf2_start)
 
-#elif defined(QB64_WINDOWS) || defined(QB64_LINUX)
+#elif defined(QB64_WINDOWS) || defined(QB64_LINUX) || defined(QB64_HAIKU)
     // On Linux and 64-bit Windows, we use objcopy, and the symbols do have an
     // underscore prefix.
     extern char _binary_soundfont_sf2_start[];

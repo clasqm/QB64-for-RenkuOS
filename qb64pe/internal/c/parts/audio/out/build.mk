@@ -108,3 +108,12 @@ $(QB_AUDIO_OUT_LIB): $(AUDIO_OUT_OBJS)
 
 CLEAN_LIST += $(AUDIO_OUT_OBJS) $(QB_AUDIO_OUT_LIB)
 
+
+ifeq ($(OS),hai)
+	# Haiku links the OpenAL Soft provided by HaikuPorts (which has a native
+	# Media Kit backend). The copy bundled here is built against ALSA on Linux
+	# and cannot be compiled for Haiku, so none of these sources are built.
+	AUDIO_OUT_SRCS :=
+	AUDIO_OUT_OBJS :=
+	QB_AUDIO_OUT_LIB :=
+endif
