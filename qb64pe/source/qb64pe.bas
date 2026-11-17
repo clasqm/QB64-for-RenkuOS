@@ -12721,6 +12721,8 @@ IF os$ = "LNX" THEN
 
     IF INSTR(_OS$, "[MACOSX]") THEN
         makeline$ = makeline$ + " OS=osx"
+    ELSEIF INSTR(_OS$, "[HAIKU]") THEN
+        makeline$ = makeline$ + " OS=hai"
     ELSE
         makeline$ = makeline$ + " OS=lnx"
     END IF

@@ -1,7 +1,7 @@
 #include "libqb.h"
 #include "common.h"
 
-#ifdef QB64_GUI
+#if defined(QB64_GUI) && !defined(QB64_HAIKU)
 #    include "parts/core/glew/src/glew.c"
 #endif
 
@@ -20,6 +20,15 @@
 
 #    include <mach-o/dyld.h> //required for _NSGetExecutablePath
 
+#endif
+
+#ifdef QB64_HAIKU
+#    include <image.h> //get_next_image_info(), required to locate the executable
+#    ifdef QB64_GUI
+#        include <Alert.h>
+#        include <Clipboard.h>
+#        include <Message.h>
+#    endif
 #endif
 
 #include "mutex.h"
@@ -1204,7 +1213,7 @@ int64 orwl_gettime(void) {
 }
 #endif
 
-#ifdef QB64_LINUX
+#if defined(QB64_LINUX) || defined(QB64_HAIKU)
 int64 GetTicks() {
     struct timespec tp;
     clock_gettime(CLOCK_MONOTONIC, &tp);
@@ -29229,6 +29238,51 @@ char *x11clipboardpaste() {
     return NULL;
 }
 
+#elif defined(QB64_HAIKU)
+#    ifdef QB64_GUI
+static BClipboard *haiku_clipboard() {
+    if (be_clipboard)
+        return be_clipboard;
+    static BClipboard *fallback = NULL;
+    if (!fallback)
+        fallback = new BClipboard("system");
+    return fallback;
+}
+
+void x11clipboardcopy(const char *text) {
+    BClipboard *clipboard = haiku_clipboard();
+    if (!clipboard->Lock())
+        return;
+    clipboard->Clear();
+    BMessage *data = clipboard->Data();
+    if (data)
+        data->AddData("text/plain", B_MIME_TYPE, text, strlen(text) + 1);
+    clipboard->Commit();
+    clipboard->Unlock();
+}
+
+char *x11clipboardpaste() {
+    char *result = NULL;
+    BClipboard *clipboard = haiku_clipboard();
+    if (!clipboard->Lock())
+        return NULL;
+    BMessage *data = clipboard->Data();
+    const void *text = NULL;
+    ssize_t length = 0;
+    if (data && data->FindData("text/plain", B_MIME_TYPE, &text, &length) == B_OK && text && length > 0) {
+        result = (char *)malloc(length + 1);
+        if (result) {
+            memcpy(result, text, length);
+            result[length] = 0;
+        }
+    }
+    clipboard->Unlock();
+    return result;
+}
+#    else
+void x11clipboardcopy(const char *text) {}
+char *x11clipboardpaste() { return NULL; }
+#    endif
 #elif defined(QB64_LINUX)
 void x11clipboardcopy(const char *text) {}
 char *x11clipboardpaste() { return NULL; }
@@ -29280,7 +29334,7 @@ void sub__clipboard(qbs *text) {
     return;
 #endif
 
-#if defined(QB64_LINUX)
+#if defined(QB64_LINUX) || defined(QB64_HAIKU)
     static qbs *textz = NULL;
     if (!textz)
         textz = qbs_new(0, 0);
@@ -29524,7 +29578,7 @@ CantGetPasteboardItemCount:
     return NULL;
 #endif
 
-#if defined(QB64_LINUX)
+#if defined(QB64_LINUX) || defined(QB64_HAIKU)
     qbs *text;
     char *cp = x11clipboardpaste();
     cp = x11clipboardpaste();
@@ -32797,6 +32851,12 @@ qbs *func__os() {
 #    else
     tqbs = qbs_new_txt("[LINUX][64BIT]");
 #    endif
+#elif defined(QB64_HAIKU)
+#    ifdef QB64_32
+    tqbs = qbs_new_txt("[HAIKU][32BIT][LINUX]");
+#    else
+    tqbs = qbs_new_txt("[HAIKU][64BIT][LINUX]");
+#    endif
 #elif defined(QB64_MACOSX)
 #    ifdef QB64_32
     tqbs = qbs_new_txt("[MACOSX][32BIT][LINUX]");
@@ -34632,6 +34692,13 @@ void GLUT_key_ascii(int32 key, int32 down) {
 
     // Note: The following is required regardless of whether FREEGLUT is/isn't being used
     //#ifdef CORE_FREEGLUT
+    //Some GLUT implementations report the Return key as a line feed (10) instead
+    //of a carriage return (13); Haiku's libglut does exactly that. Normalize it
+    //here, before the CTRL handling, so Enter works without holding Ctrl down.
+    if (key == 10) {
+        key = 13;
+        goto ctrl_mod;
+    } // 10
     // Is CTRL key down? If so, unencode character (applying shift as required)
     if (mod & 2) {
         // if (key==127){ //Removed: Might clash with CTRL+DELETE
@@ -37486,6 +37553,17 @@ int main(int argc, char *argv[]) {
         memset(pathbuf, 0, sizeof(pathbuf));
         readlink("/proc/self/exe", pathbuf, 65535);
         chdir(dirname(pathbuf));
+    }
+#elif defined(QB64_HAIKU)
+    {
+        char pathbuf[B_PATH_NAME_LENGTH + 1];
+        image_info info;
+        int32 cookie = 0;
+        memset(pathbuf, 0, sizeof(pathbuf));
+        if (get_next_image_info(0, &cookie, &info) == B_OK) {
+            strncpy(pathbuf, info.name, B_PATH_NAME_LENGTH);
+            chdir(dirname(pathbuf));
+        }
     }
 #elif defined(QB64_MACOSX)
     {

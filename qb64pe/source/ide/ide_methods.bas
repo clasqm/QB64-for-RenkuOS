@@ -1605,7 +1605,7 @@ FUNCTION ide2 (ignore)
                             '1- Link to compilelog.txt:
                             IF INSTR(_OS$, "WIN") THEN
                                 SHELL _DONTWAIT QuotedFilename$(compilelog$)
-                            ELSEIF INSTR(_OS$, "MAC") THEN
+                            ELSEIF INSTR(_OS$, "MAC") OR INSTR(_OS$, "[HAIKU]") THEN
                                 SHELL _DONTWAIT "open " + QuotedFilename$(compilelog$)
                             ELSE
                                 SHELL _DONTWAIT "xdg-open " + QuotedFilename$(compilelog$)
@@ -1622,7 +1622,7 @@ FUNCTION ide2 (ignore)
                             '3- Link to the output folder when "Output EXE to source #folder" is checked:
                             IF INSTR(_OS$, "WIN") THEN
                                 SHELL _DONTWAIT "explorer /select," + QuotedFilename$(lastBinaryGenerated$)
-                            ELSEIF INSTR(_OS$, "MAC") THEN
+                            ELSEIF INSTR(_OS$, "MAC") OR INSTR(_OS$, "[HAIKU]") THEN
                                 SHELL _DONTWAIT "open " + QuotedFilename$(path.exe$)
                             ELSE
                                 SHELL _DONTWAIT "xdg-open " + QuotedFilename$(path.exe$)
@@ -2289,7 +2289,7 @@ FUNCTION ide2 (ignore)
 
                     IF INSTR(_OS$, "WIN") THEN
                         SHELL _HIDE _DONTWAIT "start " + url$
-                    ELSEIF INSTR(_OS$, "MAC") THEN
+                    ELSEIF INSTR(_OS$, "MAC") OR INSTR(_OS$, "[HAIKU]") THEN
                         SHELL _HIDE _DONTWAIT "open " + url$
                     ELSE
                         SHELL _HIDE _DONTWAIT "xdg-open " + url$
@@ -2613,7 +2613,7 @@ FUNCTION ide2 (ignore)
                                         END IF
                                         IF INSTR(_OS$, "WIN") THEN
                                             SHELL _HIDE _DONTWAIT "start " + l$
-                                        ELSEIF INSTR(_OS$, "MAC") THEN
+                                        ELSEIF INSTR(_OS$, "MAC") OR INSTR(_OS$, "[HAIKU]") THEN
                                             SHELL _HIDE _DONTWAIT "open " + l$
                                         ELSE
                                             SHELL _HIDE _DONTWAIT "xdg-open " + l$

@@ -20,6 +20,10 @@
 // We need the IMAGE_... macros from here
 #include "image.h"
 #include "tinyfiledialogs.h"
+#ifdef QB64_HAIKU
+#    include <Alert.h>
+#    include <InterfaceDefs.h>
+#endif
 // The below include is a bad idea because of reasons mentioned in https://github.com/QB64-Phoenix-Edition/QB64pe/issues/172
 // However, we need a bunch of things like the 'qbs' structs and some more
 // We'll likely keep the 'include' this way because I do not want to duplicate stuff and cause issues
@@ -454,6 +458,21 @@ bool gui_alert(const char *fmt, ...) {
 // This exists because InForm calls it directly.
 // It only supports the "MB_OK" and "MB_YESNO" options
 int MessageBox(int ignore, char *message, char *title, int type) {
+#ifdef QB64_HAIKU
+    // tinyfiledialogs shells out to zenity/kdialog on Unix, neither of which
+    // exists on Haiku, so use the native alert instead
+    if (type & MB_SYSTEMMODAL)
+        type -= MB_SYSTEMMODAL;
+    const char *msg = message ? message : "";
+    const char *ttl = title ? title : "";
+    if ((type & 0b00000111) == MB_YESNO) {
+        BAlert *alert = new BAlert(ttl, msg, "Yes", "No", NULL, B_WIDTH_AS_USUAL, B_WARNING_ALERT);
+        return (alert->Go() == 0) ? IDYES : IDNO;
+    }
+    BAlert *alert = new BAlert(ttl, msg, "OK", NULL, NULL, B_WIDTH_AS_USUAL, B_INFO_ALERT);
+    alert->Go();
+    return IDOK;
+#endif
     const char *msgType;
     const char *icon;
     int yesret;

@@ -6,6 +6,16 @@ ifndef OS
 $(error "OS must be set to 'lnx', 'win', or 'osx'")
 endif
 
+# The compiler shipped pre-generated in internal/source predates Haiku support
+# and asks for OS=lnx when it builds a program. On Haiku that has to mean the
+# Haiku configuration, so map it here; cross-compiling from another OS is
+# unaffected because the check is on the host.
+ifeq ($(OS),lnx)
+    ifeq ($(shell uname -s),Haiku)
+        OS := hai
+    endif
+endif
+
 # The extra tag to put on ./internal/temp and qbx.o when multiple instances are involved
 # This is blank for the 'normal' files
 TEMP_ID ?=
@@ -51,6 +61,29 @@ ifeq ($(OS),lnx)
 		BITS := 64
 	endif
 endif
+
+ifeq ($(OS),hai)
+	hai := y
+
+	PATH_INTERNAL := ./internal
+	PATH_INTERNAL_SRC := $(PATH_INTERNAL)/source
+	PATH_INTERNAL_TEMP := $(PATH_INTERNAL)/temp$(TEMP_ID)
+	PATH_INTERNAL_C := $(PATH_INTERNAL)/c
+	PATH_LIBQB := $(PATH_INTERNAL_C)/libqb
+	CP := cp -r
+	RM := rm -fr
+	MKDIR := mkdir -p
+	OBJCOPY := objcopy
+	FIXPATH = $1
+	PLATFORM := posix
+	EXTENSION :=
+	BITS := 64
+
+	# Compiling with -no-pie lets some file explorers know we're an executable,
+	# not a shared object
+	CXXFLAGS += -no-pie
+endif
+
 
 ifeq ($(OS),win)
 	win := y
@@ -138,6 +171,12 @@ CXXFLAGS += -w -std=gnu++11
 ifeq ($(OS),lnx)
 	CXXLIBS += -lGL -lGLU -lX11 -lpthread -ldl -lrt
 	CXXFLAGS += -DFREEGLUT_STATIC
+endif
+
+ifeq ($(OS),hai)
+	# Haiku ships GLUT (libglut), GLU and OpenAL Soft itself, and the bundled
+	# GLEW is compiled into libqb, so only those have to be linked here.
+	CXXLIBS += -lGL -lGLU -lglut -lGLEW -lopenal -lbe -lnetwork -lpthread -lm
 endif
 
 ifeq ($(OS),win)
@@ -331,6 +370,8 @@ ifneq ($(filter y,$(DEP_ZLIB)),)
 	CXXFLAGS += -DDEPENDENCY_ZLIB
 	ifeq ($(OS),osx)
 		CXXLIBS += "-lz"
+	else ifeq ($(OS),hai)
+		CXXLIBS += -lz
 	else
 		CXXLIBS += "-l:libz.a"
 	endif

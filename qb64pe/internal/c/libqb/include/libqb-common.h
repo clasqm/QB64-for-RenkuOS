@@ -38,6 +38,10 @@
 #    define QB64_LINUX
 #    define QB64_UNIX
 #    define QB64_GCC
+#elif defined(__HAIKU__)
+#    define QB64_HAIKU
+#    define QB64_UNIX
+#    define QB64_GCC
 #else
 #    error "Unknown system; refusing to build. Edit os.h if needed"
 #endif

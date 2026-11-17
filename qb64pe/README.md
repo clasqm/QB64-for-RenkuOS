@@ -3,13 +3,14 @@
 ![QB64-PE](source/peLogo.png)
 
 
-QB64 is a modern extended BASIC+OpenGL language that retains QB4.5/QBasic compatibility and compiles native binaries for Windows (Vista and up), Linux and macOS.
+QB64 is a modern extended BASIC+OpenGL language that retains QB4.5/QBasic compatibility and compiles native binaries for Windows (Vista and up), Linux, macOS and Haiku.
 
 # Table of Contents
 1. [Installation](#Installation)
     1. [Windows](#Windows)
     2. [macOS](#macOS)
     3. [Linux](#Linux)
+    4. [Haiku](#Haiku)
 
 2.  [Usage](#Usage)
 3.  [Additional Info](#Additional_Info)
@@ -38,6 +39,24 @@ Run ```./setup_osx.command``` to compile QB64-PE for your OS version.
 Compile QB64-PE with ```./setup_lnx.sh```.
 
 Dependencies should be automatically installed. Required packages include OpenGL, ALSA and the GNU C++ Compiler.
+
+<a name="Haiku"></a>
+## Haiku
+
+This tree builds natively on Haiku x86_64 / RenkuOS. Install the toolchain and libraries with:
+
+```bash
+pkgman install gcc mesa_devel glu_devel openal_devel
+pkgman install devel:libGLEW
+```
+
+Then run:
+
+```bash
+./setup_haiku.sh
+```
+
+Unlike the Linux build this uses Haiku's own GLUT (`libglut`, a GLUT 3.7 implementation) instead of the bundled FreeGLUT, and HaikuPorts GLEW instead of the bundled copy, so `CORE_FREEGLUT` is not defined. See `HAIKU.md` for what the port changes and what is not supported yet.
 
 <a name="Usage"></a>
 # Usage
