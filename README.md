@@ -6,9 +6,9 @@ QB64 is a modern extended BASIC+OpenGL language that retains QB4.5/QBasic compat
 
 [![qb64.png](https://i.postimg.cc/SRNqQgk6/qb64.png)](https://postimg.cc/qhYWjXtq)
 
-originally forked from from [QB64Team/qb64](https://github.com/QB64Team/qb64). Yes, this is the abandoned original version, not the 
-lively QB64PE fork. QB64PE demanded versions of glut etc. that Haiku/RenkuOS didn't have yet. Once this port is stable 
-we will look at incorporating changes and fixes from that fork.
+So is this originally forked from from [QB64Team/qb64](https://github.com/QB64Team/qb64). Yes, this is the abandoned original version, not the 
+lively QB64PE fork. QB64PE demanded versions of glut etc. that Haiku/RenkuOS didn't have yet. Once this port is stable, 
+we will look at adding the latest compatible version of qb64pe to the release, giving us the best of both worlds.
 
 # Table of Contents
 1. [Installation](#Installation)
@@ -31,6 +31,7 @@ pkgman install gcc mesa_devel glu_devel glew_devel openal_devel
 Then build the IDE and the compiler:
 
 ```bash
+cd qb64-classic
 ./setup_haiku.sh
 ```
 

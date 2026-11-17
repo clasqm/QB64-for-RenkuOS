@@ -1,0 +1,13 @@
+if(oldstr3323){
+if(oldstr3323->fixed)qbs_set(oldstr3323,_SUB_XONGOTOGOSUB_STRING_A);
+qbs_free(_SUB_XONGOTOGOSUB_STRING_A);
+}
+if(oldstr3324){
+if(oldstr3324->fixed)qbs_set(oldstr3324,_SUB_XONGOTOGOSUB_STRING_CA);
+qbs_free(_SUB_XONGOTOGOSUB_STRING_CA);
+}
+qbs_free(_SUB_XONGOTOGOSUB_STRING_L);
+qbs_free(_SUB_XONGOTOGOSUB_STRING_E2);
+qbs_free(_SUB_XONGOTOGOSUB_STRING_E);
+qbs_free(_SUB_XONGOTOGOSUB_STRING_U);
+qbs_free(_SUB_XONGOTOGOSUB_STRING_LB);

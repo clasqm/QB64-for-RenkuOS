@@ -1,0 +1,4 @@
+if(oldstr3929){
+if(oldstr3929->fixed)qbs_set(oldstr3929,_SUB_WRITEBUFFERS_STRING_SBNAME);
+qbs_free(_SUB_WRITEBUFFERS_STRING_SBNAME);
+}

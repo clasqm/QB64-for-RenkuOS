@@ -1,0 +1,10 @@
+if(oldstr5747){
+if(oldstr5747->fixed)qbs_set(oldstr5747,_FUNC_IDEZGETFILEPATH_STRING_ROOT);
+qbs_free(_FUNC_IDEZGETFILEPATH_STRING_ROOT);
+}
+if(oldstr5748){
+if(oldstr5748->fixed)qbs_set(oldstr5748,_FUNC_IDEZGETFILEPATH_STRING_F);
+qbs_free(_FUNC_IDEZGETFILEPATH_STRING_F);
+}
+qbs_free(_FUNC_IDEZGETFILEPATH_STRING_P);
+qbs_free(_FUNC_IDEZGETFILEPATH_STRING_P2);
