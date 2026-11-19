@@ -29,6 +29,9 @@
 // QB64_HAIKU is defined by libqb-common.h, which the include above pulls in,
 // so the Haiku GUI headers have to come after it.
 #ifdef QB64_HAIKU
+// Haiku's BArchivable declares instantiate_object(..., image_id*) and does not
+// pull in the definition of image_id itself, so kernel/image.h must come first.
+#    include <kernel/image.h>
 #    include <Alert.h>
 #    include <InterfaceDefs.h>
 #endif
