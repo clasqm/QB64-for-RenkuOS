@@ -38,6 +38,12 @@ if [ "$jobs" -gt 8 ]; then
 fi
 
 echo "Cleaning previous build"
+# Wipe internal/temp outright: make clean leaves behind any file whose name
+# contains a space (the stray " 2.txt" duplicates of 3.4.0), and a leftover
+# "data10 2.txt" breaks the qbx.o dependency list because make splits it on
+# the space.
+rm -rf internal/temp
+mkdir -p internal/temp
 make clean OS=hai >/dev/null 2>&1 || true
 
 # ---------------------------------------------------------------------------
@@ -61,6 +67,6 @@ if [ -x ./qb64pe ]; then
 	echo "Run ./qb64pe to start the IDE, or ./qb64pe -c file.bas to compile a program."
 else
 	echo "It appears that the qb64pe executable was not created; check the errors above."
-	echo "Most failures are missing packages: gcc, mesa_devel, glu_devel, glew_devel, openal_devel."
+	echo "Most failures are missing packages: gcc, mesa_devel, glu_devel, openal_devel."
 	exit 1
 fi
