@@ -2,9 +2,9 @@
 #include "common.h"
 
 #ifdef QB64_GUI
-#    ifdef QB64_HAIKU
-#        include <GL/glew.h> //system GLEW, linked with -lGLEW
-#    else
+#    ifndef QB64_HAIKU
+// Haiku does not use GLEW at all: <GL/glext.h> declares the extension entry
+// points as plain prototypes (see libqb-common.h).
 #        include "parts/core/glew/src/glew.c"
 #    endif
 #endif
@@ -38016,12 +38016,22 @@ int main(int argc, char *argv[]) {
     }
     window_exists = 1;
 
+#    ifdef QB64_HAIKU
+    // No GLEW on Haiku: the extension entry points come straight from
+    // <GL/glext.h>, so detect framebuffer object support from the string.
+    {
+        const char *gl_extensions = (const char *)glGetString(GL_EXTENSIONS);
+        if (gl_extensions && strstr(gl_extensions, "GL_EXT_framebuffer_object"))
+            framebufferobjects_supported = 1;
+    }
+#    else
     GLenum err = glewInit();
     if (GLEW_OK != err) {
         gui_alert((char *)glewGetErrorString(err));
     }
     if (glewIsSupported("GL_EXT_framebuffer_object"))
         framebufferobjects_supported = 1;
+#    endif
 
     glutDisplayFunc(GLUT_DISPLAY_REQUEST);
 

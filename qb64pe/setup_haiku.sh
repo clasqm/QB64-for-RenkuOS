@@ -2,12 +2,13 @@
 # QB64-PE installer for Haiku x86_64 (and RenkuOS)
 #
 # Required packages (HaikuPorts):
-#   pkgman install gcc mesa_devel glu_devel glew_devel openal_devel
+#   pkgman install gcc mesa_devel glu_devel openal_devel
 #
 # GLUT is part of Haiku itself (libglut, a GLUT 3.7 implementation), GLU comes
-# from the Haiku 'glu' package, GLEW and OpenAL Soft come from HaikuPorts. The
-# bundled FreeGLUT and GLEW sources are not used on Haiku, and because Haiku's
-# GLUT has no FreeGLUT extensions CORE_FREEGLUT is not defined either.
+# from the Haiku 'glu' package and OpenAL Soft from HaikuPorts. The bundled
+# FreeGLUT and GLEW sources are not used: Mesa's libGL exports the GL_EXT entry
+# points directly, and because Haiku's GLUT has no FreeGLUT extensions
+# CORE_FREEGLUT is not defined either.
 #
 # Unlike the legacy tree this needs no separate bootstrap stage: internal/c/qbx.cpp
 # includes the pre-generated compiler sources from internal/source, which the

@@ -8,7 +8,6 @@ x86_64 with Haiku's own libraries. It is built separately from the
 
 ```bash
 pkgman install gcc mesa_devel glu_devel openal_devel
-pkgman install devel:libGLEW
 ./setup_haiku.sh
 ```
 
@@ -34,8 +33,8 @@ when the host is Haiku, so both old and new compilers produce working builds.
 | --- | --- |
 | Platform detection | `internal/c/libqb/include/libqb-common.h` defines `QB64_HAIKU`, `QB64_UNIX` and `QB64_GCC` for `__HAIKU__` |
 | GLUT | `internal/c/parts/core/src.c` includes Haiku's `<GL/glut.h>` instead of the bundled FreeGLUT and deliberately does **not** define `CORE_FREEGLUT` |
-| GLEW | the bundled `glew.c` is not compiled in; `libqb.cpp` and `src.c` use the HaikuPorts `<GL/glew.h>` and the link uses `-lGLEW` |
-| Build system | `Makefile` gained an `OS=hai` target (POSIX paths, `-no-pie`, no `-lX11`/`-ldl`/`-lrt`/`-lasound`, links `-lGL -lGLU -lglut -lGLEW -lopenal -lbe -lnetwork -lpthread -lm`) plus a host check that turns `OS=lnx` into `OS=hai` on Haiku |
+| GLEW | no GLEW at all: Mesa's `libGL` exports the `GL_EXT` entry points, so `libqb-common.h` defines `GL_GLEXT_PROTOTYPES` and `<GL/glext.h>` declares them as plain prototypes (Haiku's `glext.h` and `glew.h` cannot be mixed, and GLEW needs `glXGetProcAddress`, which Haiku lacks). Framebuffer object support is probed with `glGetString(GL_EXTENSIONS)` |
+| Build system | `Makefile` gained an `OS=hai` target (POSIX paths, `-no-pie`, no `-lX11`/`-ldl`/`-lrt`/`-lasound`, links `-lGL -lGLU -lglut -lopenal -lbe -lnetwork -lpthread -lm`) plus a host check that turns `OS=lnx` into `OS=hai` on Haiku |
 | FreeGLUT core | `internal/c/parts/core/build.mk` skips the bundled FreeGLUT/GLEW on Haiku |
 | OpenAL | the bundled OpenAL Soft sources are not compiled; the HaikuPorts `openal` package is linked instead (it has a native Media Kit backend) |
 | Clipboard | `BClipboard` for `_CLIPBOARD`/`CLIPBOARD$` |

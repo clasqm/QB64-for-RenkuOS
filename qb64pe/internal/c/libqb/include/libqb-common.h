@@ -42,6 +42,13 @@
 #    define QB64_HAIKU
 #    define QB64_UNIX
 #    define QB64_GCC
+// Haiku links against Mesa's libGL, which exports the GL extension entry
+// points directly, so there is no GLEW indirection. Defining this makes
+// <GL/glext.h> (pulled in by <GL/gl.h>) declare those functions as ordinary
+// prototypes instead of GLEW-style function pointers.
+#    ifndef GL_GLEXT_PROTOTYPES
+#        define GL_GLEXT_PROTOTYPES 1
+#    endif
 #else
 #    error "Unknown system; refusing to build. Edit os.h if needed"
 #endif

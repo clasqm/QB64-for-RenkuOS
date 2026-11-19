@@ -20,16 +20,18 @@
 // We need the IMAGE_... macros from here
 #include "image.h"
 #include "tinyfiledialogs.h"
-#ifdef QB64_HAIKU
-#    include <Alert.h>
-#    include <InterfaceDefs.h>
-#endif
 // The below include is a bad idea because of reasons mentioned in https://github.com/QB64-Phoenix-Edition/QB64pe/issues/172
 // However, we need a bunch of things like the 'qbs' structs and some more
 // We'll likely keep the 'include' this way because I do not want to duplicate stuff and cause issues
 // Matt is already doing work to separate and modularize libqb
 // So, this will be replaced with relevant stuff once that work is done
 #include "../../libqb.h"
+// QB64_HAIKU is defined by libqb-common.h, which the include above pulls in,
+// so the Haiku GUI headers have to come after it.
+#ifdef QB64_HAIKU
+#    include <Alert.h>
+#    include <InterfaceDefs.h>
+#endif
 //-----------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------

@@ -174,9 +174,9 @@ ifeq ($(OS),lnx)
 endif
 
 ifeq ($(OS),hai)
-	# Haiku ships GLUT (libglut), GLU and OpenAL Soft itself, and the bundled
-	# GLEW is compiled into libqb, so only those have to be linked here.
-	CXXLIBS += -lGL -lGLU -lglut -lGLEW -lopenal -lbe -lnetwork -lpthread -lm
+	# Haiku ships GLUT (libglut), GLU and OpenAL Soft itself. Mesa's libGL
+	# exports the GL_EXT entry points directly, so GLEW is not used at all.
+	CXXLIBS += -lGL -lGLU -lglut -lopenal -lbe -lnetwork -lpthread -lm
 endif
 
 ifeq ($(OS),win)

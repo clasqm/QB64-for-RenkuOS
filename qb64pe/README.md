@@ -47,7 +47,6 @@ This tree builds natively on Haiku x86_64 / RenkuOS. Install the toolchain and l
 
 ```bash
 pkgman install gcc mesa_devel glu_devel openal_devel
-pkgman install devel:libGLEW
 ```
 
 Then run:
@@ -56,7 +55,7 @@ Then run:
 ./setup_haiku.sh
 ```
 
-Unlike the Linux build this uses Haiku's own GLUT (`libglut`, a GLUT 3.7 implementation) instead of the bundled FreeGLUT, and HaikuPorts GLEW instead of the bundled copy, so `CORE_FREEGLUT` is not defined. See `HAIKU.md` for what the port changes and what is not supported yet.
+Unlike the Linux build this uses Haiku's own GLUT (`libglut`, a GLUT 3.7 implementation) instead of the bundled FreeGLUT, and Mesa's `libGL` prototypes (via `GL_GLEXT_PROTOTYPES`) instead of GLEW, so `CORE_FREEGLUT` is not defined. See `HAIKU.md` for what the port changes and what is not supported yet.
 
 <a name="Usage"></a>
 # Usage
