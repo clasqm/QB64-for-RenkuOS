@@ -13,8 +13,11 @@ endif
 # Note the 'override': the compiler invokes make as 'make ... OS=lnx', and a
 # variable that comes from the command line beats any assignment made in the
 # makefile, so a plain 'OS := hai' here is silently ignored.
+# The check accepts the Haiku-only /boot/system directory as well as uname, so
+# that a sanitised PATH (or a different uname output) cannot silently turn this
+# mapping off again.
 ifeq ($(OS),lnx)
-    ifeq ($(shell uname -s),Haiku)
+    ifneq ($(filter Haiku,$(shell uname -s))$(wildcard /boot/system),)
         override OS := hai
     endif
 endif
