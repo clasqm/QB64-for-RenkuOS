@@ -1,0 +1,4 @@
+/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/qb64pe_stage.dir
+/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/qb64pe.dir
+/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/edit_cache.dir
+/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/rebuild_cache.dir

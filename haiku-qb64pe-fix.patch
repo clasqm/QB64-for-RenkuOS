@@ -1,28 +1,310 @@
-From 515346f62b3993574313ccf6c4f130351ac8baf6 Mon Sep 17 00:00:00 2001
+From 75364fdc67605d7e6c5dec95cdaff4298f86ba40 Mon Sep 17 00:00:00 2001
 From: Codebuff <noreply@codebuff.com>
-Date: Thu, 19 Nov 2026 13:01:29 +0000
-Subject: [PATCH] qb64pe: include kernel/image.h before the Haiku GUI headers
+Date: Thu, 19 Nov 2026 19:46:26 +0000
+Subject: [PATCH] qb64pe: exit programs cleanly on Haiku instead of crashing on
+ END
 
-Haiku's BArchivable.h uses image_id in instantiate_object() without defining
-it; pulling in <kernel/image.h> first makes gui.cpp compile.
+Haiku's libglut registers an exit handler that destroys the remaining GLUT
+windows and calls BGLView::UnlockGL() on them. QB64 terminates a program from
+the main loop thread while the window belongs to the thread inside
+glutMainLoop(), so that unlock hits Haiku's "UnlockGL called without LockGL"
+debugger() and every program died with a crash report after a normal END.
+
+The runtime now goes through QB64_QUIT(), which on Haiku flushes and calls
+_exit() so the exit handlers never run; every other platform keeps plain
+exit(). All terminating exit() calls in libqb.cpp are routed through it.
 ---
- qb64pe/internal/c/parts/gui/gui.cpp | 3 +++
- 1 file changed, 3 insertions(+)
+ qb64pe/internal/c/libqb.cpp | 98 ++++++++++++++++++++++---------------
+ 1 file changed, 58 insertions(+), 40 deletions(-)
 
-diff --git a/qb64pe/internal/c/parts/gui/gui.cpp b/qb64pe/internal/c/parts/gui/gui.cpp
-index 009ad4cc8..bce4fbd75 100644
---- a/qb64pe/internal/c/parts/gui/gui.cpp
-+++ b/qb64pe/internal/c/parts/gui/gui.cpp
-@@ -29,6 +29,9 @@
- // QB64_HAIKU is defined by libqb-common.h, which the include above pulls in,
- // so the Haiku GUI headers have to come after it.
+diff --git a/qb64pe/internal/c/libqb.cpp b/qb64pe/internal/c/libqb.cpp
+index d2a4defba..773d57d2d 100644
+--- a/qb64pe/internal/c/libqb.cpp
++++ b/qb64pe/internal/c/libqb.cpp
+@@ -28,6 +28,7 @@
+ 
  #ifdef QB64_HAIKU
-+// Haiku's BArchivable declares instantiate_object(..., image_id*) and does not
-+// pull in the definition of image_id itself, so kernel/image.h must come first.
-+#    include <kernel/image.h>
- #    include <Alert.h>
- #    include <InterfaceDefs.h>
+ #    include <kernel/image.h> //get_next_image_info(), required to locate the executable
++#    include <unistd.h>       //_exit(), used by the shutdown path
+ #    ifdef QB64_GUI
+ #        include <Alert.h>
+ #        include <Clipboard.h>
+@@ -40,6 +41,23 @@
+ #include "image.h"
+ #include "gui.h"
+ 
++// Haiku's libglut installs an exit handler that destroys any remaining GLUT
++// windows and calls BGLView::UnlockGL() on them. QB64 ends a program from the
++// main loop thread, while the window belongs to the thread that sits inside
++// glutMainLoop(), so that unlock trips Haiku's "UnlockGL called without LockGL"
++// debugger() and the program dies with a crash report after a perfectly normal
++// END. Flush and terminate without running the exit handlers instead; the
++// kernel reclaims the rest of the address space.
++#if defined(QB64_HAIKU) && defined(QB64_GUI)
++static void qb64_haiku_quit(int32 code) {
++    fflush(NULL);
++    _exit(code);
++}
++#    define QB64_QUIT(code) qb64_haiku_quit(code)
++#else
++#    define QB64_QUIT(code) exit(code)
++#endif
++
+ int32 disableEvents = 0;
+ 
+ // Global console vvalues
+@@ -7639,12 +7657,12 @@ skip_0F_opcodes:
+         i2 = i2 - 10 + 65;
+     unknown_opcode_mess->chr[17] = i2;
+     gui_alert((const char *)unknown_opcode_mess->chr, "X86 Error", "ok");
+-    exit(86);
++    QB64_QUIT(86);
+ done:
+     if (*ip)
+         goto next_opcode;
+ 
+-    exit(cmem[0]);
++    QB64_QUIT(cmem[0]);
+ }
+ 
+ int32 screen_last_valid = 0;
+@@ -7918,19 +7936,19 @@ void fix_error() {
+                        (!prevent_handling ? FIXERRMSG_CONT : ""));
+         errmess = (char *)malloc(len + 1);
+         if (!errmess)
+-            exit(0); // At this point we just give up
++            QB64_QUIT(0); // At this point we just give up
+         snprintf(errmess, len + 1, FIXERRMSG_BODY, (inclercl ? inclercl : ercl), (inclercl ? includedfilename : FIXERRMSG_MAINFILE), cp,
+                  (!prevent_handling ? FIXERRMSG_CONT : ""));
+ 
+         len = snprintf(errtitle, 0, FIXERRMSG_TITLE, (!prevent_handling ? FIXERRMSG_UNHAND : FIXERRMSG_CRIT), new_error, binary_name->chr);
+         errtitle = (char *)malloc(len + 1);
+         if (!errtitle)
+-            exit(0); // At this point we just give up
++            QB64_QUIT(0); // At this point we just give up
+         snprintf(errtitle, len + 1, FIXERRMSG_TITLE, (!prevent_handling ? FIXERRMSG_UNHAND : FIXERRMSG_CRIT), new_error, binary_name->chr);
+ 
+         if (prevent_handling) {
+             v = gui_alert(errmess, errtitle, "ok");
+-            exit(0);
++            QB64_QUIT(0);
+         } else {
+             v = gui_alert(errmess, errtitle, "yesno");
+         }
+@@ -7957,107 +7975,107 @@ void error(int32 error_number) {
+     // out of memory errors
+     if (error_number == 257) {
+         gui_alert("Out of memory", "Critical Error #1", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     } // generic "Out of memory" error
+     // tracable "Out of memory" errors
+     if (error_number == 502) {
+         gui_alert("Out of memory", "Critical Error #2", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 503) {
+         gui_alert("Out of memory", "Critical Error #3", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 504) {
+         gui_alert("Out of memory", "Critical Error #4", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 505) {
+         gui_alert("Out of memory", "Critical Error #5", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 506) {
+         gui_alert("Out of memory", "Critical Error #6", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 507) {
+         gui_alert("Out of memory", "Critical Error #7", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 508) {
+         gui_alert("Out of memory", "Critical Error #8", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 509) {
+         gui_alert("Out of memory", "Critical Error #9", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 510) {
+         gui_alert("Out of memory", "Critical Error #10", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 511) {
+         gui_alert("Out of memory", "Critical Error #11", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 512) {
+         gui_alert("Out of memory", "Critical Error #12", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 513) {
+         gui_alert("Out of memory", "Critical Error #13", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 514) {
+         gui_alert("Out of memory", "Critical Error #14", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 515) {
+         gui_alert("Out of memory", "Critical Error #15", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 516) {
+         gui_alert("Out of memory", "Critical Error #16", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 517) {
+         gui_alert("Out of memory", "Critical Error #17", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 518) {
+         gui_alert("Out of memory", "Critical Error #18", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+ 
+     // other critical errors
+     if (error_number == 11) {
+         gui_alert("Division by zero", "Critical Error", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 256) {
+         gui_alert("Out of stack space", "Critical Error", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 259) {
+         gui_alert("Cannot find dynamic library file", "Critical Error", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 260) {
+         gui_alert("Sub/Function does not exist in dynamic library", "Critical Error", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 261) {
+         gui_alert("Sub/Function does not exist in dynamic library", "Critical Error", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+ 
+     if (error_number == 270) {
+         gui_alert("_GL command called outside of SUB _GL's scope", "Critical Error", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+     if (error_number == 271) {
+         gui_alert("END/SYSTEM called within SUB _GL's scope", "Critical Error", "ok");
+-        exit(0);
++        QB64_QUIT(0);
+     }
+ 
+     if (!new_error) {
+@@ -26302,7 +26320,7 @@ void sub_end() {
+     }
+     close_program = 1;
+     end();
+-    exit(0); //<-- should never happen
++    QB64_QUIT(0); //<-- should never happen
+ }
+ 
+ uint8 pu_dig[1024]; // digits (left justified)
+@@ -27285,7 +27303,7 @@ void sub_run(qbs *f) {
+ run_exit:
+     close_program = 1;
+     end();
+-    exit(99); //<--this line should never actually be executed
++    QB64_QUIT(99); //<--this line should never actually be executed
+ }
+ 
+ #ifdef DEPENDENCY_ICON
+@@ -32522,22 +32540,22 @@ void field_update(int32 fileno) {
+     static gfs_file_struct *gfs;
+     i = fileno;
+     if (i < 0) {
+-        exit(7701);
++        QB64_QUIT(7701);
+     } // bad file mode (TCP/IP exclusion)
+     if (gfs_fileno_valid(i) != 1) {
+-        exit(7702);
++        QB64_QUIT(7702);
+     }                  // Bad file name or number
+     i = gfs_fileno[i]; // convert fileno to gfs index
+     gfs = &gfs_file[i];
+     if (gfs->type != 1) {
+-        exit(7703);
++        QB64_QUIT(7703);
+     } // Bad file mode (note: must have RANDOM access)
+ 
+     static qbs *str;
+     for (i = 0; i < gfs->field_strings_n; i++) {
+         str = gfs->field_strings[i];
+         if (!str)
+-            exit(7704);
++            QB64_QUIT(7704);
+ 
+         // fix length if necessary
+         if (str->len != str->field->size) {
+@@ -37822,7 +37840,7 @@ int main(int argc, char *argv[]) {
+         GLenum err = glewInit();
+         if (GLEW_OK != err)
+         {
+-        exit(0);
++        QB64_QUIT(0);
+         }
+         //fprintf(stdout, "Status: Using GLEW %s\n", glewGetString(GLEW_VERSION));
+ 
+@@ -37845,7 +37863,7 @@ int main(int argc, char *argv[]) {
+     // normally MAIN_LOOP() is launched in a separate thread to reserve the primary thread for GLUT
+     // that is not required, so run MAIN_LOOP() in our primary thread
+     MAIN_LOOP();
+-    exit(0);
++    QB64_QUIT(0);
  #endif
+ 
+ #ifdef QB64_WINDOWS
+@@ -38006,7 +38024,7 @@ int main(int argc, char *argv[]) {
+ 
+     if (!glutGet(GLUT_DISPLAY_MODE_POSSIBLE)) // must be called on Linux or GLUT crashes
+     {
+-        exit(1);
++        QB64_QUIT(1);
+     }
+ 
+     if (!window_title) {
+@@ -38256,7 +38274,7 @@ end_program:
+ 
+     snd_un_init();
+ 
+-    exit(exit_code);
++    QB64_QUIT(exit_code);
+ }
+ 
+ // used to preserve the previous frame's content for comparison/reuse purposes
 -- 
 2.43.0
 

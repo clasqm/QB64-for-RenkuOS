@@ -1,0 +1,2150 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+      - "/usr/bin/"
+      - "/usr/local/bin/"
+    searched_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/uname"
+      - "/boot/home/config/non-packaged/bin/uname"
+      - "/boot/home/config/bin/uname"
+      - "/boot/home/config/apps/uname"
+      - "/boot/system/non-packaged/bin/uname"
+    found: "/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeDetermineSystem.cmake:220 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Haiku - R1~beta6 - x86_64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gmake"
+      - "make"
+      - "smake"
+    candidate_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+    searched_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/gmake"
+      - "/boot/home/config/non-packaged/bin/gmake"
+      - "/boot/home/config/bin/gmake"
+      - "/boot/home/config/apps/gmake"
+      - "/boot/system/non-packaged/bin/gmake"
+      - "/bin/gmake"
+      - "/boot/system/apps/gmake"
+      - "/boot/system/preferences/gmake"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/make"
+      - "/boot/home/config/non-packaged/bin/make"
+      - "/boot/home/config/bin/make"
+      - "/boot/home/config/apps/make"
+      - "/boot/system/non-packaged/bin/make"
+    found: "/bin/make"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCCompiler.cmake:64 (_cmake_find_compiler)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER"
+    description: "C compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cc"
+      - "gcc"
+      - "cl"
+      - "bcc"
+      - "xlc"
+      - "icx"
+      - "clang"
+      - "dpclang"
+    candidate_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+    searched_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/cc"
+      - "/boot/home/config/non-packaged/bin/cc"
+      - "/boot/home/config/bin/cc"
+      - "/boot/home/config/apps/cc"
+      - "/boot/system/non-packaged/bin/cc"
+    found: "/bin/cc"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerId.cmake:541 (find_file)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerId.cmake:583 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/boot/system/data/cmake/Modules/"
+    found: "/boot/system/data/cmake/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/4.5.0/CompilerIdC/a.out
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "/bin/"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+    found: "/bin/ar"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ranlib"
+    candidate_directories:
+      - "/bin/"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+    found: "/bin/ranlib"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "/bin/"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+    found: "/bin/strip"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "/bin/"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+    found: "/bin/ld"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nm"
+    candidate_directories:
+      - "/bin/"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+    found: "/bin/nm"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objdump"
+    candidate_directories:
+      - "/bin/"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+    found: "/bin/objdump"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objcopy"
+    candidate_directories:
+      - "/bin/"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+    found: "/bin/objcopy"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "readelf"
+    candidate_directories:
+      - "/bin/"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+    found: "/bin/readelf"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dlltool"
+    candidate_directories:
+      - "/bin/"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+    searched_directories:
+      - "/bin/dlltool"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/dlltool"
+      - "/boot/home/config/non-packaged/bin/dlltool"
+      - "/boot/home/config/bin/dlltool"
+      - "/boot/home/config/apps/dlltool"
+      - "/boot/system/non-packaged/bin/dlltool"
+      - "/boot/system/apps/dlltool"
+      - "/boot/system/preferences/dlltool"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "addr2line"
+    candidate_directories:
+      - "/bin/"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+    found: "/bin/addr2line"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeFindBinUtils.cmake:249 (find_program)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "/bin/"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+    searched_directories:
+      - "/bin/tapi"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/tapi"
+      - "/boot/home/config/non-packaged/bin/tapi"
+      - "/boot/home/config/bin/tapi"
+      - "/boot/home/config/apps/tapi"
+      - "/boot/system/non-packaged/bin/tapi"
+      - "/boot/system/apps/tapi"
+      - "/boot/system/preferences/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCCompiler.cmake:202 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ar-15.3"
+      - "gcc-ar-15"
+      - "gcc-ar15"
+      - "gcc-ar"
+    candidate_directories:
+      - "/bin/"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+    searched_directories:
+      - "/bin/gcc-ar-15.3"
+      - "/bin/gcc-ar-15"
+      - "/bin/gcc-ar15"
+    found: "/bin/gcc-ar"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:33 (find_program)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCCompiler.cmake:202 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ranlib-15.3"
+      - "gcc-ranlib-15"
+      - "gcc-ranlib15"
+      - "gcc-ranlib"
+    candidate_directories:
+      - "/bin/"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+    searched_directories:
+      - "/bin/gcc-ranlib-15.3"
+      - "/bin/gcc-ranlib-15"
+      - "/bin/gcc-ranlib15"
+    found: "/bin/gcc-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCXXCompiler.cmake:69 (_cmake_find_compiler)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER"
+    description: "CXX compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CC"
+      - "c++"
+      - "g++"
+      - "aCC"
+      - "cl"
+      - "bcc"
+      - "xlC"
+      - "icpx"
+      - "icx"
+      - "clang++"
+      - "dpclang++"
+    candidate_directories:
+      - "/bin/"
+    searched_directories:
+      - "/bin/CC"
+    found: "/bin/c++"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerId.cmake:541 (find_file)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerId.cmake:583 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/boot/system/data/cmake/Modules/"
+    found: "/boot/system/data/cmake/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/4.5.0/CompilerIdCXX/a.out
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCXXCompiler.cmake:208 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ar-15.3"
+      - "gcc-ar-15"
+      - "gcc-ar15"
+      - "gcc-ar"
+    candidate_directories:
+      - "/bin/"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+    searched_directories:
+      - "/bin/gcc-ar-15.3"
+      - "/bin/gcc-ar-15"
+      - "/bin/gcc-ar15"
+    found: "/bin/gcc-ar"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:33 (find_program)"
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCXXCompiler.cmake:208 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ranlib-15.3"
+      - "gcc-ranlib-15"
+      - "gcc-ranlib15"
+      - "gcc-ranlib"
+    candidate_directories:
+      - "/bin/"
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+    searched_directories:
+      - "/bin/gcc-ranlib-15.3"
+      - "/bin/gcc-ranlib-15"
+      - "/bin/gcc-ranlib15"
+    found: "/bin/gcc-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerABI.cmake:123 (try_compile)"
+      - "/boot/system/data/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/CMakeScratch/TryCompile-MxyrtX"
+      binary: "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/CMakeScratch/TryCompile-MxyrtX"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: false
+      stdout: |
+        Change Dir: '/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/CMakeScratch/TryCompile-MxyrtX'
+        
+        Run Build Command(s): /bin/cmake -E env VERBOSE=1 /bin/make -f Makefile cmTC_3c54b/fast
+        /bin/make  -f CMakeFiles/cmTC_3c54b.dir/build.make CMakeFiles/cmTC_3c54b.dir/build
+        make[1]: Entering directory '/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/CMakeScratch/TryCompile-MxyrtX'
+        Building C object CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.o
+        /bin/cc   -v -o CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.o -c /boot/system/data/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/bin/cc
+        Target: x86_64-unknown-haiku
+        Configured with: /sources/gcc-15.3.0/configure --build=x86_64-unknown-haiku --prefix=/packages/gcc-15.3.0_2026_10_11-1/.self/develop/tools --libexecdir=/packages/gcc-15.3.0_2026_10_11-1/.self/develop/tools/lib --mandir=/packages/gcc-15.3.0_2026_10_11-1/.self/documentation/man --docdir=/packages/gcc-15.3.0_2026_10_11-1/.self/documentation/packages/gcc --enable-threads=posix --disable-nls --enable-shared --with-gnu-ld --with-gnu-as --enable-version-specific-runtime-libs --enable-languages=c,c++,fortran,jit,objc --enable-lto --enable-frame-pointer --with-pkgversion=2026_10_11 --enable-__cxa-atexit --with-system-zlib --enable-checking=release --with-bug-url=http://dev.haiku-os.org/ --with-default-libstdcxx-abi=gcc4-compatible --enable-libssp --enable-libsanitizer --enable-host-shared --disable-multilib
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 15.3.0 (2026_10_11) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3c54b.dir/'
+         /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/cc1 -quiet -v -iprefix /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/ /boot/system/data/cmake/Modules/CMakeCCompilerABI.c -fPIC -Wno-multichar -fno-omit-frame-pointer -quiet -dumpdir CMakeFiles/cmTC_3c54b.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp//cclYg2le.s
+        GNU C23 (2026_10_11) version 15.3.0 (x86_64-unknown-haiku)
+        	compiled by GNU C version 15.3.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.2.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/include"
+        ignoring duplicate directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/include"
+        ignoring duplicate directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/include-fixed"
+        ignoring nonexistent directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/include"
+        ignoring nonexistent directory "/boot/system/develop/headers/os/be_apps/Deskbar"
+        ignoring nonexistent directory "/boot/system/develop/headers/3rdparty"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include
+         /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include-fixed
+         /boot/system/non-packaged/develop/headers
+         /boot/system/develop/headers/os
+         /boot/system/develop/headers/os/app
+         /boot/system/develop/headers/os/device
+         /boot/system/develop/headers/os/drivers
+         /boot/system/develop/headers/os/game
+         /boot/system/develop/headers/os/interface
+         /boot/system/develop/headers/os/kernel
+         /boot/system/develop/headers/os/locale
+         /boot/system/develop/headers/os/mail
+         /boot/system/develop/headers/os/media
+         /boot/system/develop/headers/os/midi
+         /boot/system/develop/headers/os/midi2
+         /boot/system/develop/headers/os/net
+         /boot/system/develop/headers/os/opengl
+         /boot/system/develop/headers/os/storage
+         /boot/system/develop/headers/os/support
+         /boot/system/develop/headers/os/translation
+         /boot/system/develop/headers/os/add-ons/graphics
+         /boot/system/develop/headers/os/add-ons/input_server
+         /boot/system/develop/headers/os/add-ons/mail_daemon
+         /boot/system/develop/headers/os/add-ons/registrar
+         /boot/system/develop/headers/os/add-ons/screen_saver
+         /boot/system/develop/headers/os/add-ons/tracker
+         /boot/system/develop/headers/os/be_apps/NetPositive
+         /boot/system/develop/headers/os/be_apps/Tracker
+         /boot/system/develop/headers/bsd
+         /boot/system/develop/headers/glibc
+         /boot/system/develop/headers/gnu
+         /boot/system/develop/headers/posix
+         /boot/system/develop/headers
+        End of search list.
+        Compiler executable checksum: 6ddc727bf9fc9ada1b3ddaf7f4b8acb8
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3c54b.dir/'
+         /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/bin/as -v -V -Qy --64 -o CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.o /tmp//cclYg2le.s
+        GNU assembler version 2.46.1 (x86_64-unknown-haiku) using BFD version (GNU Binutils) 2.46.1
+        COMPILER_PATH=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/:/boot/system/develop/tools/bin/../lib/gcc/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/bin/
+        BELIBRARIES=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/:/boot/system/develop/tools/bin/../lib/gcc/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../:/boot/system/develop/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_3c54b
+        /bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c54b.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/bin/cc
+        COLLECT_LTO_WRAPPER=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/lto-wrapper
+        Target: x86_64-unknown-haiku
+        Configured with: /sources/gcc-15.3.0/configure --build=x86_64-unknown-haiku --prefix=/packages/gcc-15.3.0_2026_10_11-1/.self/develop/tools --libexecdir=/packages/gcc-15.3.0_2026_10_11-1/.self/develop/tools/lib --mandir=/packages/gcc-15.3.0_2026_10_11-1/.self/documentation/man --docdir=/packages/gcc-15.3.0_2026_10_11-1/.self/documentation/packages/gcc --enable-threads=posix --disable-nls --enable-shared --with-gnu-ld --with-gnu-as --enable-version-specific-runtime-libs --enable-languages=c,c++,fortran,jit,objc --enable-lto --enable-frame-pointer --with-pkgversion=2026_10_11 --enable-__cxa-atexit --with-system-zlib --enable-checking=release --with-bug-url=http://dev.haiku-os.org/ --with-default-libstdcxx-abi=gcc4-compatible --enable-libssp --enable-libsanitizer --enable-host-shared --disable-multilib
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 15.3.0 (2026_10_11) 
+        COMPILER_PATH=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/:/boot/system/develop/tools/bin/../lib/gcc/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/bin/
+        BELIBRARIES=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/:/boot/system/develop/tools/bin/../lib/gcc/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../:/boot/system/develop/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3c54b' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_3c54b.'
+         /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/collect2 -plugin /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/liblto_plugin.so -plugin-opt=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp//ccjwH4wH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lroot -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64_haiku -shared -no-undefined -o cmTC_3c54b /boot/system/develop/lib/crti.o /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtbeginS.o /boot/system/develop/lib/start_dyn.o /boot/system/develop/lib/init_term_dyn.o -L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0 -L/boot/system/develop/tools/bin/../lib/gcc -L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib -L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../.. -L/boot/system/develop/lib CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lroot -lgcc --push-state --as-needed -lgcc_s --pop-state /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtendS.o /boot/system/develop/lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3c54b' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_3c54b.'
+        /bin/cc  -v CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.o -o cmTC_3c54b
+        make[1]: Leaving directory '/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/CMakeScratch/TryCompile-MxyrtX'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerABI.cmake:255 (message)"
+      - "/boot/system/data/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include]
+          add: [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include-fixed]
+          add: [/boot/system/non-packaged/develop/headers]
+          add: [/boot/system/develop/headers/os]
+          add: [/boot/system/develop/headers/os/app]
+          add: [/boot/system/develop/headers/os/device]
+          add: [/boot/system/develop/headers/os/drivers]
+          add: [/boot/system/develop/headers/os/game]
+          add: [/boot/system/develop/headers/os/interface]
+          add: [/boot/system/develop/headers/os/kernel]
+          add: [/boot/system/develop/headers/os/locale]
+          add: [/boot/system/develop/headers/os/mail]
+          add: [/boot/system/develop/headers/os/media]
+          add: [/boot/system/develop/headers/os/midi]
+          add: [/boot/system/develop/headers/os/midi2]
+          add: [/boot/system/develop/headers/os/net]
+          add: [/boot/system/develop/headers/os/opengl]
+          add: [/boot/system/develop/headers/os/storage]
+          add: [/boot/system/develop/headers/os/support]
+          add: [/boot/system/develop/headers/os/translation]
+          add: [/boot/system/develop/headers/os/add-ons/graphics]
+          add: [/boot/system/develop/headers/os/add-ons/input_server]
+          add: [/boot/system/develop/headers/os/add-ons/mail_daemon]
+          add: [/boot/system/develop/headers/os/add-ons/registrar]
+          add: [/boot/system/develop/headers/os/add-ons/screen_saver]
+          add: [/boot/system/develop/headers/os/add-ons/tracker]
+          add: [/boot/system/develop/headers/os/be_apps/NetPositive]
+          add: [/boot/system/develop/headers/os/be_apps/Tracker]
+          add: [/boot/system/develop/headers/bsd]
+          add: [/boot/system/develop/headers/glibc]
+          add: [/boot/system/develop/headers/gnu]
+          add: [/boot/system/develop/headers/posix]
+          add: [/boot/system/develop/headers]
+        end of search list found
+        collapse include dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include] ==> [/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/include]
+        collapse include dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include-fixed] ==> [/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/include-fixed]
+        collapse include dir [/boot/system/non-packaged/develop/headers] ==> [/boot/system/non-packaged/develop/headers]
+        collapse include dir [/boot/system/develop/headers/os] ==> [/boot/system/develop/headers/os]
+        collapse include dir [/boot/system/develop/headers/os/app] ==> [/boot/system/develop/headers/os/app]
+        collapse include dir [/boot/system/develop/headers/os/device] ==> [/boot/system/develop/headers/os/device]
+        collapse include dir [/boot/system/develop/headers/os/drivers] ==> [/boot/system/develop/headers/os/drivers]
+        collapse include dir [/boot/system/develop/headers/os/game] ==> [/boot/system/develop/headers/os/game]
+        collapse include dir [/boot/system/develop/headers/os/interface] ==> [/boot/system/develop/headers/os/interface]
+        collapse include dir [/boot/system/develop/headers/os/kernel] ==> [/boot/system/develop/headers/os/kernel]
+        collapse include dir [/boot/system/develop/headers/os/locale] ==> [/boot/system/develop/headers/os/locale]
+        collapse include dir [/boot/system/develop/headers/os/mail] ==> [/boot/system/develop/headers/os/mail]
+        collapse include dir [/boot/system/develop/headers/os/media] ==> [/boot/system/develop/headers/os/media]
+        collapse include dir [/boot/system/develop/headers/os/midi] ==> [/boot/system/develop/headers/os/midi]
+        collapse include dir [/boot/system/develop/headers/os/midi2] ==> [/boot/system/develop/headers/os/midi2]
+        collapse include dir [/boot/system/develop/headers/os/net] ==> [/boot/system/develop/headers/os/net]
+        collapse include dir [/boot/system/develop/headers/os/opengl] ==> [/boot/system/develop/headers/os/opengl]
+        collapse include dir [/boot/system/develop/headers/os/storage] ==> [/boot/system/develop/headers/os/storage]
+        collapse include dir [/boot/system/develop/headers/os/support] ==> [/boot/system/develop/headers/os/support]
+        collapse include dir [/boot/system/develop/headers/os/translation] ==> [/boot/system/develop/headers/os/translation]
+        collapse include dir [/boot/system/develop/headers/os/add-ons/graphics] ==> [/boot/system/develop/headers/os/add-ons/graphics]
+        collapse include dir [/boot/system/develop/headers/os/add-ons/input_server] ==> [/boot/system/develop/headers/os/add-ons/input_server]
+        collapse include dir [/boot/system/develop/headers/os/add-ons/mail_daemon] ==> [/boot/system/develop/headers/os/add-ons/mail_daemon]
+        collapse include dir [/boot/system/develop/headers/os/add-ons/registrar] ==> [/boot/system/develop/headers/os/add-ons/registrar]
+        collapse include dir [/boot/system/develop/headers/os/add-ons/screen_saver] ==> [/boot/system/develop/headers/os/add-ons/screen_saver]
+        collapse include dir [/boot/system/develop/headers/os/add-ons/tracker] ==> [/boot/system/develop/headers/os/add-ons/tracker]
+        collapse include dir [/boot/system/develop/headers/os/be_apps/NetPositive] ==> [/boot/system/develop/headers/os/be_apps/NetPositive]
+        collapse include dir [/boot/system/develop/headers/os/be_apps/Tracker] ==> [/boot/system/develop/headers/os/be_apps/Tracker]
+        collapse include dir [/boot/system/develop/headers/bsd] ==> [/boot/system/develop/headers/bsd]
+        collapse include dir [/boot/system/develop/headers/glibc] ==> [/boot/system/develop/headers/glibc]
+        collapse include dir [/boot/system/develop/headers/gnu] ==> [/boot/system/develop/headers/gnu]
+        collapse include dir [/boot/system/develop/headers/posix] ==> [/boot/system/develop/headers/posix]
+        collapse include dir [/boot/system/develop/headers] ==> [/boot/system/develop/headers]
+        implicit include dirs: [/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/include;/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/include-fixed;/boot/system/non-packaged/develop/headers;/boot/system/develop/headers/os;/boot/system/develop/headers/os/app;/boot/system/develop/headers/os/device;/boot/system/develop/headers/os/drivers;/boot/system/develop/headers/os/game;/boot/system/develop/headers/os/interface;/boot/system/develop/headers/os/kernel;/boot/system/develop/headers/os/locale;/boot/system/develop/headers/os/mail;/boot/system/develop/headers/os/media;/boot/system/develop/headers/os/midi;/boot/system/develop/headers/os/midi2;/boot/system/develop/headers/os/net;/boot/system/develop/headers/os/opengl;/boot/system/develop/headers/os/storage;/boot/system/develop/headers/os/support;/boot/system/develop/headers/os/translation;/boot/system/develop/headers/os/add-ons/graphics;/boot/system/develop/headers/os/add-ons/input_server;/boot/system/develop/headers/os/add-ons/mail_daemon;/boot/system/develop/headers/os/add-ons/registrar;/boot/system/develop/headers/os/add-ons/screen_saver;/boot/system/develop/headers/os/add-ons/tracker;/boot/system/develop/headers/os/be_apps/NetPositive;/boot/system/develop/headers/os/be_apps/Tracker;/boot/system/develop/headers/bsd;/boot/system/develop/headers/glibc;/boot/system/develop/headers/gnu;/boot/system/develop/headers/posix;/boot/system/develop/headers]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerABI.cmake:291 (message)"
+      - "/boot/system/data/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)(\\.exe)?"?( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild))("|,| |$)]
+        ignore line: [Change Dir: '/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/CMakeScratch/TryCompile-MxyrtX']
+        ignore line: []
+        ignore line: [Run Build Command(s): /bin/cmake -E env VERBOSE=1 /bin/make -f Makefile cmTC_3c54b/fast]
+        ignore line: [/bin/make  -f CMakeFiles/cmTC_3c54b.dir/build.make CMakeFiles/cmTC_3c54b.dir/build]
+        ignore line: [make[1]: Entering directory '/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/CMakeScratch/TryCompile-MxyrtX']
+        ignore line: [Building C object CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/bin/cc   -v -o CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.o -c /boot/system/data/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/bin/cc]
+        ignore line: [Target: x86_64-unknown-haiku]
+        ignore line: [Configured with: /sources/gcc-15.3.0/configure --build=x86_64-unknown-haiku --prefix=/packages/gcc-15.3.0_2026_10_11-1/.self/develop/tools --libexecdir=/packages/gcc-15.3.0_2026_10_11-1/.self/develop/tools/lib --mandir=/packages/gcc-15.3.0_2026_10_11-1/.self/documentation/man --docdir=/packages/gcc-15.3.0_2026_10_11-1/.self/documentation/packages/gcc --enable-threads=posix --disable-nls --enable-shared --with-gnu-ld --with-gnu-as --enable-version-specific-runtime-libs --enable-languages=c,c++,fortran,jit,objc --enable-lto --enable-frame-pointer --with-pkgversion=2026_10_11 --enable-__cxa-atexit --with-system-zlib --enable-checking=release --with-bug-url=http://dev.haiku-os.org/ --with-default-libstdcxx-abi=gcc4-compatible --enable-libssp --enable-libsanitizer --enable-host-shared --disable-multilib]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 15.3.0 (2026_10_11) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3c54b.dir/']
+        ignore line: [ /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/cc1 -quiet -v -iprefix /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/ /boot/system/data/cmake/Modules/CMakeCCompilerABI.c -fPIC -Wno-multichar -fno-omit-frame-pointer -quiet -dumpdir CMakeFiles/cmTC_3c54b.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp//cclYg2le.s]
+        ignore line: [GNU C23 (2026_10_11) version 15.3.0 (x86_64-unknown-haiku)]
+        ignore line: [	compiled by GNU C version 15.3.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.2.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/include"]
+        ignore line: [ignoring duplicate directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/include"]
+        ignore line: [ignoring duplicate directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/include"]
+        ignore line: [ignoring nonexistent directory "/boot/system/develop/headers/os/be_apps/Deskbar"]
+        ignore line: [ignoring nonexistent directory "/boot/system/develop/headers/3rdparty"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include]
+        ignore line: [ /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include-fixed]
+        ignore line: [ /boot/system/non-packaged/develop/headers]
+        ignore line: [ /boot/system/develop/headers/os]
+        ignore line: [ /boot/system/develop/headers/os/app]
+        ignore line: [ /boot/system/develop/headers/os/device]
+        ignore line: [ /boot/system/develop/headers/os/drivers]
+        ignore line: [ /boot/system/develop/headers/os/game]
+        ignore line: [ /boot/system/develop/headers/os/interface]
+        ignore line: [ /boot/system/develop/headers/os/kernel]
+        ignore line: [ /boot/system/develop/headers/os/locale]
+        ignore line: [ /boot/system/develop/headers/os/mail]
+        ignore line: [ /boot/system/develop/headers/os/media]
+        ignore line: [ /boot/system/develop/headers/os/midi]
+        ignore line: [ /boot/system/develop/headers/os/midi2]
+        ignore line: [ /boot/system/develop/headers/os/net]
+        ignore line: [ /boot/system/develop/headers/os/opengl]
+        ignore line: [ /boot/system/develop/headers/os/storage]
+        ignore line: [ /boot/system/develop/headers/os/support]
+        ignore line: [ /boot/system/develop/headers/os/translation]
+        ignore line: [ /boot/system/develop/headers/os/add-ons/graphics]
+        ignore line: [ /boot/system/develop/headers/os/add-ons/input_server]
+        ignore line: [ /boot/system/develop/headers/os/add-ons/mail_daemon]
+        ignore line: [ /boot/system/develop/headers/os/add-ons/registrar]
+        ignore line: [ /boot/system/develop/headers/os/add-ons/screen_saver]
+        ignore line: [ /boot/system/develop/headers/os/add-ons/tracker]
+        ignore line: [ /boot/system/develop/headers/os/be_apps/NetPositive]
+        ignore line: [ /boot/system/develop/headers/os/be_apps/Tracker]
+        ignore line: [ /boot/system/develop/headers/bsd]
+        ignore line: [ /boot/system/develop/headers/glibc]
+        ignore line: [ /boot/system/develop/headers/gnu]
+        ignore line: [ /boot/system/develop/headers/posix]
+        ignore line: [ /boot/system/develop/headers]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 6ddc727bf9fc9ada1b3ddaf7f4b8acb8]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3c54b.dir/']
+        ignore line: [ /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/bin/as -v -V -Qy --64 -o CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.o /tmp//cclYg2le.s]
+        ignore line: [GNU assembler version 2.46.1 (x86_64-unknown-haiku) using BFD version (GNU Binutils) 2.46.1]
+        ignore line: [COMPILER_PATH=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/:/boot/system/develop/tools/bin/../lib/gcc/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/bin/]
+        ignore line: [BELIBRARIES=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/:/boot/system/develop/tools/bin/../lib/gcc/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../:/boot/system/develop/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_3c54b]
+        ignore line: [/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c54b.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/lto-wrapper]
+        ignore line: [Target: x86_64-unknown-haiku]
+        ignore line: [Configured with: /sources/gcc-15.3.0/configure --build=x86_64-unknown-haiku --prefix=/packages/gcc-15.3.0_2026_10_11-1/.self/develop/tools --libexecdir=/packages/gcc-15.3.0_2026_10_11-1/.self/develop/tools/lib --mandir=/packages/gcc-15.3.0_2026_10_11-1/.self/documentation/man --docdir=/packages/gcc-15.3.0_2026_10_11-1/.self/documentation/packages/gcc --enable-threads=posix --disable-nls --enable-shared --with-gnu-ld --with-gnu-as --enable-version-specific-runtime-libs --enable-languages=c,c++,fortran,jit,objc --enable-lto --enable-frame-pointer --with-pkgversion=2026_10_11 --enable-__cxa-atexit --with-system-zlib --enable-checking=release --with-bug-url=http://dev.haiku-os.org/ --with-default-libstdcxx-abi=gcc4-compatible --enable-libssp --enable-libsanitizer --enable-host-shared --disable-multilib]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 15.3.0 (2026_10_11) ]
+        ignore line: [COMPILER_PATH=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/:/boot/system/develop/tools/bin/../lib/gcc/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/bin/]
+        ignore line: [BELIBRARIES=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/:/boot/system/develop/tools/bin/../lib/gcc/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../:/boot/system/develop/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3c54b' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_3c54b.']
+        link line: [ /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/collect2 -plugin /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/liblto_plugin.so -plugin-opt=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp//ccjwH4wH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lroot -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64_haiku -shared -no-undefined -o cmTC_3c54b /boot/system/develop/lib/crti.o /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtbeginS.o /boot/system/develop/lib/start_dyn.o /boot/system/develop/lib/init_term_dyn.o -L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0 -L/boot/system/develop/tools/bin/../lib/gcc -L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib -L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../.. -L/boot/system/develop/lib CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lroot -lgcc --push-state --as-needed -lgcc_s --pop-state /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtendS.o /boot/system/develop/lib/crtn.o]
+          arg [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore, skip following value
+          arg [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/liblto_plugin.so] ==> skip value of -plugin
+          arg [-plugin-opt=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp//ccjwH4wH.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lroot] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64_haiku] ==> ignore
+          arg [-shared] ==> ignore
+          arg [-no-undefined] ==> ignore
+          arg [-o] ==> ignore, skip following value
+          arg [cmTC_3c54b] ==> skip value of -o
+          arg [/boot/system/develop/lib/crti.o] ==> obj [/boot/system/develop/lib/crti.o]
+          arg [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtbeginS.o] ==> obj [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtbeginS.o]
+          arg [/boot/system/develop/lib/start_dyn.o] ==> obj [/boot/system/develop/lib/start_dyn.o]
+          arg [/boot/system/develop/lib/init_term_dyn.o] ==> obj [/boot/system/develop/lib/init_term_dyn.o]
+          arg [-L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0] ==> dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0]
+          arg [-L/boot/system/develop/tools/bin/../lib/gcc] ==> dir [/boot/system/develop/tools/bin/../lib/gcc]
+          arg [-L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib] ==> dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib]
+          arg [-L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../..] ==> dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../..]
+          arg [-L/boot/system/develop/lib] ==> dir [/boot/system/develop/lib]
+          arg [CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lroot] ==> lib [root]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtendS.o] ==> obj [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtendS.o]
+          arg [/boot/system/develop/lib/crtn.o] ==> obj [/boot/system/develop/lib/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3c54b' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_3c54b.']
+        ignore line: [/bin/cc  -v CMakeFiles/cmTC_3c54b.dir/CMakeCCompilerABI.c.o -o cmTC_3c54b]
+        ignore line: [make[1]: Leaving directory '/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/CMakeScratch/TryCompile-MxyrtX']
+        ignore line: []
+        ignore line: []
+        collapse obj [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtbeginS.o] ==> [/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/crtbeginS.o]
+        collapse obj [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtendS.o] ==> [/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/crtendS.o]
+        collapse library dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0] ==> [/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0]
+        collapse library dir [/boot/system/develop/tools/bin/../lib/gcc] ==> [/boot/system/develop/tools/lib/gcc]
+        collapse library dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib] ==> [/boot/system/develop/tools/x86_64-unknown-haiku/lib]
+        collapse library dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../..] ==> [/boot/system/develop/tools/lib]
+        collapse library dir [/boot/system/develop/lib] ==> [/boot/system/develop/lib]
+        implicit libs: [gcc;gcc_s;root;gcc;gcc_s]
+        implicit objs: [/boot/system/develop/lib/crti.o;/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/crtbeginS.o;/boot/system/develop/lib/start_dyn.o;/boot/system/develop/lib/init_term_dyn.o;/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/crtendS.o;/boot/system/develop/lib/crtn.o]
+        implicit dirs: [/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0;/boot/system/develop/tools/lib/gcc;/boot/system/develop/tools/x86_64-unknown-haiku/lib;/boot/system/develop/tools/lib;/boot/system/develop/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerABI.cmake:123 (try_compile)"
+      - "/boot/system/data/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/CMakeScratch/TryCompile-5EWrAY"
+      binary: "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/CMakeScratch/TryCompile-5EWrAY"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: false
+      stdout: |
+        Change Dir: '/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/CMakeScratch/TryCompile-5EWrAY'
+        
+        Run Build Command(s): /bin/cmake -E env VERBOSE=1 /bin/make -f Makefile cmTC_47f08/fast
+        /bin/make  -f CMakeFiles/cmTC_47f08.dir/build.make CMakeFiles/cmTC_47f08.dir/build
+        make[1]: Entering directory '/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/CMakeScratch/TryCompile-5EWrAY'
+        Building CXX object CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.o
+        /bin/c++   -v -o CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.o -c /boot/system/data/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/bin/c++
+        Target: x86_64-unknown-haiku
+        Configured with: /sources/gcc-15.3.0/configure --build=x86_64-unknown-haiku --prefix=/packages/gcc-15.3.0_2026_10_11-1/.self/develop/tools --libexecdir=/packages/gcc-15.3.0_2026_10_11-1/.self/develop/tools/lib --mandir=/packages/gcc-15.3.0_2026_10_11-1/.self/documentation/man --docdir=/packages/gcc-15.3.0_2026_10_11-1/.self/documentation/packages/gcc --enable-threads=posix --disable-nls --enable-shared --with-gnu-ld --with-gnu-as --enable-version-specific-runtime-libs --enable-languages=c,c++,fortran,jit,objc --enable-lto --enable-frame-pointer --with-pkgversion=2026_10_11 --enable-__cxa-atexit --with-system-zlib --enable-checking=release --with-bug-url=http://dev.haiku-os.org/ --with-default-libstdcxx-abi=gcc4-compatible --enable-libssp --enable-libsanitizer --enable-host-shared --disable-multilib
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 15.3.0 (2026_10_11) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_47f08.dir/'
+         /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/cc1plus -quiet -v -iprefix /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/ /boot/system/data/cmake/Modules/CMakeCXXCompilerABI.cpp -fPIC -Wno-multichar -fno-omit-frame-pointer -quiet -dumpdir CMakeFiles/cmTC_47f08.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -Wno-ctor-dtor-privacy -o /tmp//ccO7pGGz.s
+        GNU C++17 (2026_10_11) version 15.3.0 (x86_64-unknown-haiku)
+        	compiled by GNU C version 15.3.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.2.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/include"
+        ignoring duplicate directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++"
+        ignoring duplicate directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++/x86_64-unknown-haiku"
+        ignoring duplicate directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++/backward"
+        ignoring duplicate directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/include"
+        ignoring duplicate directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/include-fixed"
+        ignoring nonexistent directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/include"
+        ignoring nonexistent directory "/boot/system/develop/headers/os/be_apps/Deskbar"
+        ignoring nonexistent directory "/boot/system/develop/headers/3rdparty"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++
+         /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++/x86_64-unknown-haiku
+         /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++/backward
+         /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include
+         /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include-fixed
+         /boot/system/non-packaged/develop/headers
+         /boot/system/develop/headers/os
+         /boot/system/develop/headers/os/app
+         /boot/system/develop/headers/os/device
+         /boot/system/develop/headers/os/drivers
+         /boot/system/develop/headers/os/game
+         /boot/system/develop/headers/os/interface
+         /boot/system/develop/headers/os/kernel
+         /boot/system/develop/headers/os/locale
+         /boot/system/develop/headers/os/mail
+         /boot/system/develop/headers/os/media
+         /boot/system/develop/headers/os/midi
+         /boot/system/develop/headers/os/midi2
+         /boot/system/develop/headers/os/net
+         /boot/system/develop/headers/os/opengl
+         /boot/system/develop/headers/os/storage
+         /boot/system/develop/headers/os/support
+         /boot/system/develop/headers/os/translation
+         /boot/system/develop/headers/os/add-ons/graphics
+         /boot/system/develop/headers/os/add-ons/input_server
+         /boot/system/develop/headers/os/add-ons/mail_daemon
+         /boot/system/develop/headers/os/add-ons/registrar
+         /boot/system/develop/headers/os/add-ons/screen_saver
+         /boot/system/develop/headers/os/add-ons/tracker
+         /boot/system/develop/headers/os/be_apps/NetPositive
+         /boot/system/develop/headers/os/be_apps/Tracker
+         /boot/system/develop/headers/bsd
+         /boot/system/develop/headers/glibc
+         /boot/system/develop/headers/gnu
+         /boot/system/develop/headers/posix
+         /boot/system/develop/headers
+        End of search list.
+        Compiler executable checksum: 8ebbc77e41517d8b28fcb100ca65d893
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_47f08.dir/'
+         /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/bin/as -v -V -Qy --64 -o CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.o /tmp//ccO7pGGz.s
+        GNU assembler version 2.46.1 (x86_64-unknown-haiku) using BFD version (GNU Binutils) 2.46.1
+        COMPILER_PATH=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/:/boot/system/develop/tools/bin/../lib/gcc/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/bin/
+        BELIBRARIES=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/:/boot/system/develop/tools/bin/../lib/gcc/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../:/boot/system/develop/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_47f08
+        /bin/cmake -E cmake_link_script CMakeFiles/cmTC_47f08.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/bin/c++
+        COLLECT_LTO_WRAPPER=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/lto-wrapper
+        Target: x86_64-unknown-haiku
+        Configured with: /sources/gcc-15.3.0/configure --build=x86_64-unknown-haiku --prefix=/packages/gcc-15.3.0_2026_10_11-1/.self/develop/tools --libexecdir=/packages/gcc-15.3.0_2026_10_11-1/.self/develop/tools/lib --mandir=/packages/gcc-15.3.0_2026_10_11-1/.self/documentation/man --docdir=/packages/gcc-15.3.0_2026_10_11-1/.self/documentation/packages/gcc --enable-threads=posix --disable-nls --enable-shared --with-gnu-ld --with-gnu-as --enable-version-specific-runtime-libs --enable-languages=c,c++,fortran,jit,objc --enable-lto --enable-frame-pointer --with-pkgversion=2026_10_11 --enable-__cxa-atexit --with-system-zlib --enable-checking=release --with-bug-url=http://dev.haiku-os.org/ --with-default-libstdcxx-abi=gcc4-compatible --enable-libssp --enable-libsanitizer --enable-host-shared --disable-multilib
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 15.3.0 (2026_10_11) 
+        COMPILER_PATH=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/:/boot/system/develop/tools/bin/../lib/gcc/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/bin/
+        BELIBRARIES=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/:/boot/system/develop/tools/bin/../lib/gcc/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../:/boot/system/develop/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_47f08' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_47f08.'
+         /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/collect2 -plugin /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/liblto_plugin.so -plugin-opt=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp//ccJHDfxC.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lroot -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64_haiku -shared -no-undefined -o cmTC_47f08 /boot/system/develop/lib/crti.o /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtbeginS.o /boot/system/develop/lib/start_dyn.o /boot/system/develop/lib/init_term_dyn.o -L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0 -L/boot/system/develop/tools/bin/../lib/gcc -L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib -L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../.. -L/boot/system/develop/lib CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lgcc_s -lgcc -lroot -lgcc_s -lgcc /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtendS.o /boot/system/develop/lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_47f08' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_47f08.'
+        /bin/c++  -v CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_47f08
+        make[1]: Leaving directory '/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/CMakeScratch/TryCompile-5EWrAY'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerABI.cmake:255 (message)"
+      - "/boot/system/data/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++]
+          add: [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++/x86_64-unknown-haiku]
+          add: [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++/backward]
+          add: [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include]
+          add: [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include-fixed]
+          add: [/boot/system/non-packaged/develop/headers]
+          add: [/boot/system/develop/headers/os]
+          add: [/boot/system/develop/headers/os/app]
+          add: [/boot/system/develop/headers/os/device]
+          add: [/boot/system/develop/headers/os/drivers]
+          add: [/boot/system/develop/headers/os/game]
+          add: [/boot/system/develop/headers/os/interface]
+          add: [/boot/system/develop/headers/os/kernel]
+          add: [/boot/system/develop/headers/os/locale]
+          add: [/boot/system/develop/headers/os/mail]
+          add: [/boot/system/develop/headers/os/media]
+          add: [/boot/system/develop/headers/os/midi]
+          add: [/boot/system/develop/headers/os/midi2]
+          add: [/boot/system/develop/headers/os/net]
+          add: [/boot/system/develop/headers/os/opengl]
+          add: [/boot/system/develop/headers/os/storage]
+          add: [/boot/system/develop/headers/os/support]
+          add: [/boot/system/develop/headers/os/translation]
+          add: [/boot/system/develop/headers/os/add-ons/graphics]
+          add: [/boot/system/develop/headers/os/add-ons/input_server]
+          add: [/boot/system/develop/headers/os/add-ons/mail_daemon]
+          add: [/boot/system/develop/headers/os/add-ons/registrar]
+          add: [/boot/system/develop/headers/os/add-ons/screen_saver]
+          add: [/boot/system/develop/headers/os/add-ons/tracker]
+          add: [/boot/system/develop/headers/os/be_apps/NetPositive]
+          add: [/boot/system/develop/headers/os/be_apps/Tracker]
+          add: [/boot/system/develop/headers/bsd]
+          add: [/boot/system/develop/headers/glibc]
+          add: [/boot/system/develop/headers/gnu]
+          add: [/boot/system/develop/headers/posix]
+          add: [/boot/system/develop/headers]
+        end of search list found
+        collapse include dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++] ==> [/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++]
+        collapse include dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++/x86_64-unknown-haiku] ==> [/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++/x86_64-unknown-haiku]
+        collapse include dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++/backward] ==> [/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++/backward]
+        collapse include dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include] ==> [/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/include]
+        collapse include dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include-fixed] ==> [/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/include-fixed]
+        collapse include dir [/boot/system/non-packaged/develop/headers] ==> [/boot/system/non-packaged/develop/headers]
+        collapse include dir [/boot/system/develop/headers/os] ==> [/boot/system/develop/headers/os]
+        collapse include dir [/boot/system/develop/headers/os/app] ==> [/boot/system/develop/headers/os/app]
+        collapse include dir [/boot/system/develop/headers/os/device] ==> [/boot/system/develop/headers/os/device]
+        collapse include dir [/boot/system/develop/headers/os/drivers] ==> [/boot/system/develop/headers/os/drivers]
+        collapse include dir [/boot/system/develop/headers/os/game] ==> [/boot/system/develop/headers/os/game]
+        collapse include dir [/boot/system/develop/headers/os/interface] ==> [/boot/system/develop/headers/os/interface]
+        collapse include dir [/boot/system/develop/headers/os/kernel] ==> [/boot/system/develop/headers/os/kernel]
+        collapse include dir [/boot/system/develop/headers/os/locale] ==> [/boot/system/develop/headers/os/locale]
+        collapse include dir [/boot/system/develop/headers/os/mail] ==> [/boot/system/develop/headers/os/mail]
+        collapse include dir [/boot/system/develop/headers/os/media] ==> [/boot/system/develop/headers/os/media]
+        collapse include dir [/boot/system/develop/headers/os/midi] ==> [/boot/system/develop/headers/os/midi]
+        collapse include dir [/boot/system/develop/headers/os/midi2] ==> [/boot/system/develop/headers/os/midi2]
+        collapse include dir [/boot/system/develop/headers/os/net] ==> [/boot/system/develop/headers/os/net]
+        collapse include dir [/boot/system/develop/headers/os/opengl] ==> [/boot/system/develop/headers/os/opengl]
+        collapse include dir [/boot/system/develop/headers/os/storage] ==> [/boot/system/develop/headers/os/storage]
+        collapse include dir [/boot/system/develop/headers/os/support] ==> [/boot/system/develop/headers/os/support]
+        collapse include dir [/boot/system/develop/headers/os/translation] ==> [/boot/system/develop/headers/os/translation]
+        collapse include dir [/boot/system/develop/headers/os/add-ons/graphics] ==> [/boot/system/develop/headers/os/add-ons/graphics]
+        collapse include dir [/boot/system/develop/headers/os/add-ons/input_server] ==> [/boot/system/develop/headers/os/add-ons/input_server]
+        collapse include dir [/boot/system/develop/headers/os/add-ons/mail_daemon] ==> [/boot/system/develop/headers/os/add-ons/mail_daemon]
+        collapse include dir [/boot/system/develop/headers/os/add-ons/registrar] ==> [/boot/system/develop/headers/os/add-ons/registrar]
+        collapse include dir [/boot/system/develop/headers/os/add-ons/screen_saver] ==> [/boot/system/develop/headers/os/add-ons/screen_saver]
+        collapse include dir [/boot/system/develop/headers/os/add-ons/tracker] ==> [/boot/system/develop/headers/os/add-ons/tracker]
+        collapse include dir [/boot/system/develop/headers/os/be_apps/NetPositive] ==> [/boot/system/develop/headers/os/be_apps/NetPositive]
+        collapse include dir [/boot/system/develop/headers/os/be_apps/Tracker] ==> [/boot/system/develop/headers/os/be_apps/Tracker]
+        collapse include dir [/boot/system/develop/headers/bsd] ==> [/boot/system/develop/headers/bsd]
+        collapse include dir [/boot/system/develop/headers/glibc] ==> [/boot/system/develop/headers/glibc]
+        collapse include dir [/boot/system/develop/headers/gnu] ==> [/boot/system/develop/headers/gnu]
+        collapse include dir [/boot/system/develop/headers/posix] ==> [/boot/system/develop/headers/posix]
+        collapse include dir [/boot/system/develop/headers] ==> [/boot/system/develop/headers]
+        implicit include dirs: [/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++;/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++/x86_64-unknown-haiku;/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++/backward;/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/include;/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/include-fixed;/boot/system/non-packaged/develop/headers;/boot/system/develop/headers/os;/boot/system/develop/headers/os/app;/boot/system/develop/headers/os/device;/boot/system/develop/headers/os/drivers;/boot/system/develop/headers/os/game;/boot/system/develop/headers/os/interface;/boot/system/develop/headers/os/kernel;/boot/system/develop/headers/os/locale;/boot/system/develop/headers/os/mail;/boot/system/develop/headers/os/media;/boot/system/develop/headers/os/midi;/boot/system/develop/headers/os/midi2;/boot/system/develop/headers/os/net;/boot/system/develop/headers/os/opengl;/boot/system/develop/headers/os/storage;/boot/system/develop/headers/os/support;/boot/system/develop/headers/os/translation;/boot/system/develop/headers/os/add-ons/graphics;/boot/system/develop/headers/os/add-ons/input_server;/boot/system/develop/headers/os/add-ons/mail_daemon;/boot/system/develop/headers/os/add-ons/registrar;/boot/system/develop/headers/os/add-ons/screen_saver;/boot/system/develop/headers/os/add-ons/tracker;/boot/system/develop/headers/os/be_apps/NetPositive;/boot/system/develop/headers/os/be_apps/Tracker;/boot/system/develop/headers/bsd;/boot/system/develop/headers/glibc;/boot/system/develop/headers/gnu;/boot/system/develop/headers/posix;/boot/system/develop/headers]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/boot/system/data/cmake/Modules/CMakeDetermineCompilerABI.cmake:291 (message)"
+      - "/boot/system/data/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)(\\.exe)?"?( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild))("|,| |$)]
+        ignore line: [Change Dir: '/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/CMakeScratch/TryCompile-5EWrAY']
+        ignore line: []
+        ignore line: [Run Build Command(s): /bin/cmake -E env VERBOSE=1 /bin/make -f Makefile cmTC_47f08/fast]
+        ignore line: [/bin/make  -f CMakeFiles/cmTC_47f08.dir/build.make CMakeFiles/cmTC_47f08.dir/build]
+        ignore line: [make[1]: Entering directory '/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/CMakeScratch/TryCompile-5EWrAY']
+        ignore line: [Building CXX object CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/bin/c++   -v -o CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.o -c /boot/system/data/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/bin/c++]
+        ignore line: [Target: x86_64-unknown-haiku]
+        ignore line: [Configured with: /sources/gcc-15.3.0/configure --build=x86_64-unknown-haiku --prefix=/packages/gcc-15.3.0_2026_10_11-1/.self/develop/tools --libexecdir=/packages/gcc-15.3.0_2026_10_11-1/.self/develop/tools/lib --mandir=/packages/gcc-15.3.0_2026_10_11-1/.self/documentation/man --docdir=/packages/gcc-15.3.0_2026_10_11-1/.self/documentation/packages/gcc --enable-threads=posix --disable-nls --enable-shared --with-gnu-ld --with-gnu-as --enable-version-specific-runtime-libs --enable-languages=c,c++,fortran,jit,objc --enable-lto --enable-frame-pointer --with-pkgversion=2026_10_11 --enable-__cxa-atexit --with-system-zlib --enable-checking=release --with-bug-url=http://dev.haiku-os.org/ --with-default-libstdcxx-abi=gcc4-compatible --enable-libssp --enable-libsanitizer --enable-host-shared --disable-multilib]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 15.3.0 (2026_10_11) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_47f08.dir/']
+        ignore line: [ /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/cc1plus -quiet -v -iprefix /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/ /boot/system/data/cmake/Modules/CMakeCXXCompilerABI.cpp -fPIC -Wno-multichar -fno-omit-frame-pointer -quiet -dumpdir CMakeFiles/cmTC_47f08.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -Wno-ctor-dtor-privacy -o /tmp//ccO7pGGz.s]
+        ignore line: [GNU C++17 (2026_10_11) version 15.3.0 (x86_64-unknown-haiku)]
+        ignore line: [	compiled by GNU C version 15.3.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.2.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/include"]
+        ignore line: [ignoring duplicate directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++"]
+        ignore line: [ignoring duplicate directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++/x86_64-unknown-haiku"]
+        ignore line: [ignoring duplicate directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++/backward"]
+        ignore line: [ignoring duplicate directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/include"]
+        ignore line: [ignoring duplicate directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/boot/system/develop/tools/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/include"]
+        ignore line: [ignoring nonexistent directory "/boot/system/develop/headers/os/be_apps/Deskbar"]
+        ignore line: [ignoring nonexistent directory "/boot/system/develop/headers/3rdparty"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++]
+        ignore line: [ /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++/x86_64-unknown-haiku]
+        ignore line: [ /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include/c++/backward]
+        ignore line: [ /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include]
+        ignore line: [ /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/include-fixed]
+        ignore line: [ /boot/system/non-packaged/develop/headers]
+        ignore line: [ /boot/system/develop/headers/os]
+        ignore line: [ /boot/system/develop/headers/os/app]
+        ignore line: [ /boot/system/develop/headers/os/device]
+        ignore line: [ /boot/system/develop/headers/os/drivers]
+        ignore line: [ /boot/system/develop/headers/os/game]
+        ignore line: [ /boot/system/develop/headers/os/interface]
+        ignore line: [ /boot/system/develop/headers/os/kernel]
+        ignore line: [ /boot/system/develop/headers/os/locale]
+        ignore line: [ /boot/system/develop/headers/os/mail]
+        ignore line: [ /boot/system/develop/headers/os/media]
+        ignore line: [ /boot/system/develop/headers/os/midi]
+        ignore line: [ /boot/system/develop/headers/os/midi2]
+        ignore line: [ /boot/system/develop/headers/os/net]
+        ignore line: [ /boot/system/develop/headers/os/opengl]
+        ignore line: [ /boot/system/develop/headers/os/storage]
+        ignore line: [ /boot/system/develop/headers/os/support]
+        ignore line: [ /boot/system/develop/headers/os/translation]
+        ignore line: [ /boot/system/develop/headers/os/add-ons/graphics]
+        ignore line: [ /boot/system/develop/headers/os/add-ons/input_server]
+        ignore line: [ /boot/system/develop/headers/os/add-ons/mail_daemon]
+        ignore line: [ /boot/system/develop/headers/os/add-ons/registrar]
+        ignore line: [ /boot/system/develop/headers/os/add-ons/screen_saver]
+        ignore line: [ /boot/system/develop/headers/os/add-ons/tracker]
+        ignore line: [ /boot/system/develop/headers/os/be_apps/NetPositive]
+        ignore line: [ /boot/system/develop/headers/os/be_apps/Tracker]
+        ignore line: [ /boot/system/develop/headers/bsd]
+        ignore line: [ /boot/system/develop/headers/glibc]
+        ignore line: [ /boot/system/develop/headers/gnu]
+        ignore line: [ /boot/system/develop/headers/posix]
+        ignore line: [ /boot/system/develop/headers]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 8ebbc77e41517d8b28fcb100ca65d893]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_47f08.dir/']
+        ignore line: [ /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/bin/as -v -V -Qy --64 -o CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.o /tmp//ccO7pGGz.s]
+        ignore line: [GNU assembler version 2.46.1 (x86_64-unknown-haiku) using BFD version (GNU Binutils) 2.46.1]
+        ignore line: [COMPILER_PATH=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/:/boot/system/develop/tools/bin/../lib/gcc/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/bin/]
+        ignore line: [BELIBRARIES=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/:/boot/system/develop/tools/bin/../lib/gcc/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../:/boot/system/develop/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_47f08]
+        ignore line: [/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47f08.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/lto-wrapper]
+        ignore line: [Target: x86_64-unknown-haiku]
+        ignore line: [Configured with: /sources/gcc-15.3.0/configure --build=x86_64-unknown-haiku --prefix=/packages/gcc-15.3.0_2026_10_11-1/.self/develop/tools --libexecdir=/packages/gcc-15.3.0_2026_10_11-1/.self/develop/tools/lib --mandir=/packages/gcc-15.3.0_2026_10_11-1/.self/documentation/man --docdir=/packages/gcc-15.3.0_2026_10_11-1/.self/documentation/packages/gcc --enable-threads=posix --disable-nls --enable-shared --with-gnu-ld --with-gnu-as --enable-version-specific-runtime-libs --enable-languages=c,c++,fortran,jit,objc --enable-lto --enable-frame-pointer --with-pkgversion=2026_10_11 --enable-__cxa-atexit --with-system-zlib --enable-checking=release --with-bug-url=http://dev.haiku-os.org/ --with-default-libstdcxx-abi=gcc4-compatible --enable-libssp --enable-libsanitizer --enable-host-shared --disable-multilib]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 15.3.0 (2026_10_11) ]
+        ignore line: [COMPILER_PATH=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/:/boot/system/develop/tools/bin/../lib/gcc/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/bin/]
+        ignore line: [BELIBRARIES=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/:/boot/system/develop/tools/bin/../lib/gcc/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib/:/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../:/boot/system/develop/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_47f08' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_47f08.']
+        link line: [ /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/collect2 -plugin /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/liblto_plugin.so -plugin-opt=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp//ccJHDfxC.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lroot -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64_haiku -shared -no-undefined -o cmTC_47f08 /boot/system/develop/lib/crti.o /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtbeginS.o /boot/system/develop/lib/start_dyn.o /boot/system/develop/lib/init_term_dyn.o -L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0 -L/boot/system/develop/tools/bin/../lib/gcc -L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib -L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../.. -L/boot/system/develop/lib CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lgcc_s -lgcc -lroot -lgcc_s -lgcc /boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtendS.o /boot/system/develop/lib/crtn.o]
+          arg [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore, skip following value
+          arg [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/liblto_plugin.so] ==> skip value of -plugin
+          arg [-plugin-opt=/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp//ccJHDfxC.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lroot] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64_haiku] ==> ignore
+          arg [-shared] ==> ignore
+          arg [-no-undefined] ==> ignore
+          arg [-o] ==> ignore, skip following value
+          arg [cmTC_47f08] ==> skip value of -o
+          arg [/boot/system/develop/lib/crti.o] ==> obj [/boot/system/develop/lib/crti.o]
+          arg [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtbeginS.o] ==> obj [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtbeginS.o]
+          arg [/boot/system/develop/lib/start_dyn.o] ==> obj [/boot/system/develop/lib/start_dyn.o]
+          arg [/boot/system/develop/lib/init_term_dyn.o] ==> obj [/boot/system/develop/lib/init_term_dyn.o]
+          arg [-L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0] ==> dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0]
+          arg [-L/boot/system/develop/tools/bin/../lib/gcc] ==> dir [/boot/system/develop/tools/bin/../lib/gcc]
+          arg [-L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib] ==> dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib]
+          arg [-L/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../..] ==> dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../..]
+          arg [-L/boot/system/develop/lib] ==> dir [/boot/system/develop/lib]
+          arg [CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lroot] ==> lib [root]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtendS.o] ==> obj [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtendS.o]
+          arg [/boot/system/develop/lib/crtn.o] ==> obj [/boot/system/develop/lib/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_47f08' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_47f08.']
+        ignore line: [/bin/c++  -v CMakeFiles/cmTC_47f08.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_47f08]
+        ignore line: [make[1]: Leaving directory '/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/CMakeFiles/CMakeScratch/TryCompile-5EWrAY']
+        ignore line: []
+        ignore line: []
+        collapse obj [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtbeginS.o] ==> [/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/crtbeginS.o]
+        collapse obj [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/crtendS.o] ==> [/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/crtendS.o]
+        collapse library dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0] ==> [/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0]
+        collapse library dir [/boot/system/develop/tools/bin/../lib/gcc] ==> [/boot/system/develop/tools/lib/gcc]
+        collapse library dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../../../x86_64-unknown-haiku/lib] ==> [/boot/system/develop/tools/x86_64-unknown-haiku/lib]
+        collapse library dir [/boot/system/develop/tools/bin/../lib/gcc/x86_64-unknown-haiku/15.3.0/../../..] ==> [/boot/system/develop/tools/lib]
+        collapse library dir [/boot/system/develop/lib] ==> [/boot/system/develop/lib]
+        implicit libs: [stdc++;gcc_s;gcc;root;gcc_s;gcc]
+        implicit objs: [/boot/system/develop/lib/crti.o;/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/crtbeginS.o;/boot/system/develop/lib/start_dyn.o;/boot/system/develop/lib/init_term_dyn.o;/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0/crtendS.o;/boot/system/develop/lib/crtn.o]
+        implicit dirs: [/boot/system/develop/tools/lib/gcc/x86_64-unknown-haiku/15.3.0;/boot/system/develop/tools/lib/gcc;/boot/system/develop/tools/x86_64-unknown-haiku/lib;/boot/system/develop/tools/lib;/boot/system/develop/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "CMakeLists.txt:53 (find_library)"
+    mode: "library"
+    variable: "GL_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "GL"
+    candidate_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+      - "/boot/system/non-packaged/lib/"
+      - "/boot/system/non-packaged/"
+      - "/boot/system/lib/"
+      - "/boot/system/"
+      - "/boot/system/non-packaged/develop/lib/"
+      - "/boot/system/develop/lib/"
+      - "/boot/system/develop/"
+      - "/boot/system/non-packaged/develop/"
+    searched_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+      - "/boot/system/non-packaged/lib/"
+      - "/boot/system/non-packaged/"
+    found: "/boot/system/lib/libGL.so"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+      CMAKE_INSTALL_PREFIX: "/boot/system"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "CMakeLists.txt:54 (find_library)"
+    mode: "library"
+    variable: "GLU_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "GLU"
+    candidate_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+      - "/boot/system/non-packaged/lib/"
+      - "/boot/system/non-packaged/"
+      - "/boot/system/lib/"
+      - "/boot/system/"
+      - "/boot/system/non-packaged/develop/lib/"
+      - "/boot/system/develop/lib/"
+      - "/boot/system/develop/"
+      - "/boot/system/non-packaged/develop/"
+    searched_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+      - "/boot/system/non-packaged/lib/"
+      - "/boot/system/non-packaged/"
+      - "/boot/system/lib/"
+      - "/boot/system/"
+      - "/boot/system/non-packaged/develop/lib/"
+    found: "/boot/system/develop/lib/libGLU.so"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+      CMAKE_INSTALL_PREFIX: "/boot/system"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "CMakeLists.txt:55 (find_library)"
+    mode: "library"
+    variable: "GLUT_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "glut"
+    candidate_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+      - "/boot/system/non-packaged/lib/"
+      - "/boot/system/non-packaged/"
+      - "/boot/system/lib/"
+      - "/boot/system/"
+      - "/boot/system/non-packaged/develop/lib/"
+      - "/boot/system/develop/lib/"
+      - "/boot/system/develop/"
+      - "/boot/system/non-packaged/develop/"
+    searched_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+      - "/boot/system/non-packaged/lib/"
+      - "/boot/system/non-packaged/"
+    found: "/boot/system/lib/libglut.so"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+      CMAKE_INSTALL_PREFIX: "/boot/system"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "CMakeLists.txt:56 (find_library)"
+    mode: "library"
+    variable: "OPENAL_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "openal"
+    candidate_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+      - "/boot/system/non-packaged/lib/"
+      - "/boot/system/non-packaged/"
+      - "/boot/system/lib/"
+      - "/boot/system/"
+      - "/boot/system/non-packaged/develop/lib/"
+      - "/boot/system/develop/lib/"
+      - "/boot/system/develop/"
+      - "/boot/system/non-packaged/develop/"
+    searched_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+      - "/boot/system/non-packaged/lib/"
+      - "/boot/system/non-packaged/"
+      - "/boot/system/lib/"
+      - "/boot/system/"
+      - "/boot/system/non-packaged/develop/lib/"
+    found: "/boot/system/develop/lib/libopenal.so"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+      CMAKE_INSTALL_PREFIX: "/boot/system"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "CMakeLists.txt:57 (find_library)"
+    mode: "library"
+    variable: "BE_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "be"
+    candidate_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+      - "/boot/system/non-packaged/lib/"
+      - "/boot/system/non-packaged/"
+      - "/boot/system/lib/"
+      - "/boot/system/"
+      - "/boot/system/non-packaged/develop/lib/"
+      - "/boot/system/develop/lib/"
+      - "/boot/system/develop/"
+      - "/boot/system/non-packaged/develop/"
+    searched_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+      - "/boot/system/non-packaged/lib/"
+      - "/boot/system/non-packaged/"
+    found: "/boot/system/lib/libbe.so"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+      CMAKE_INSTALL_PREFIX: "/boot/system"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "CMakeLists.txt:58 (find_library)"
+    mode: "library"
+    variable: "NETWORK_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "network"
+    candidate_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+      - "/boot/system/non-packaged/lib/"
+      - "/boot/system/non-packaged/"
+      - "/boot/system/lib/"
+      - "/boot/system/"
+      - "/boot/system/non-packaged/develop/lib/"
+      - "/boot/system/develop/lib/"
+      - "/boot/system/develop/"
+      - "/boot/system/non-packaged/develop/"
+    searched_directories:
+      - "/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/"
+      - "/boot/home/config/non-packaged/bin/"
+      - "/boot/home/config/bin/"
+      - "/boot/home/config/apps/"
+      - "/boot/system/non-packaged/bin/"
+      - "/bin/"
+      - "/boot/system/apps/"
+      - "/boot/system/preferences/"
+      - "/boot/system/non-packaged/lib/"
+      - "/boot/system/non-packaged/"
+    found: "/boot/system/lib/libnetwork.so"
+    search_context:
+      ENV{PATH}:
+        - "."
+        - "/boot/home/config/non-packaged/bin"
+        - "/boot/home/config/bin"
+        - "/boot/home/config/apps"
+        - "/boot/system/non-packaged/bin"
+        - "/bin"
+        - "/boot/system/apps"
+        - "/boot/system/preferences"
+      CMAKE_INSTALL_PREFIX: "/boot/system"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+        - "/boot/system/non-packaged"
+        - "/boot/system"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+        - "/boot/system/non-packaged/develop/lib"
+        - "/boot/system/develop/lib"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+        - "/boot/system/develop"
+        - "/boot/system/non-packaged/develop"
+...

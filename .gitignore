@@ -1,6 +1,6 @@
 # Build products
 qb64pe/qb64pe
-qb64pe/internal/temp/
+qb64pe/internal/temp*/
 qb64pe/internal/**/*.o
 qb64pe/internal/**/*.a
 qb64pe/internal/**/*.sym
@@ -8,8 +8,9 @@ qb64pe/internal/**/*.sym
 qb64-classic/build/
 qb64-classic/qb64
 qb64-classic/qb64_bootstrap
-qb64-classic/internal/temp/
+qb64-classic/internal/temp*/
 
 # Editor and OS cruft
 .DS_Store
 *.swp
+*.bak

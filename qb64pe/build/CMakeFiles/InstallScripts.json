@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/boot/home/Desktop/QB64-for-RenkuOS/qb64pe/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
