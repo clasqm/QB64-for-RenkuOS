@@ -10,9 +10,12 @@ endif
 # and asks for OS=lnx when it builds a program. On Haiku that has to mean the
 # Haiku configuration, so map it here; cross-compiling from another OS is
 # unaffected because the check is on the host.
+# Note the 'override': the compiler invokes make as 'make ... OS=lnx', and a
+# variable that comes from the command line beats any assignment made in the
+# makefile, so a plain 'OS := hai' here is silently ignored.
 ifeq ($(OS),lnx)
     ifeq ($(shell uname -s),Haiku)
-        OS := hai
+        override OS := hai
     endif
 endif
 
