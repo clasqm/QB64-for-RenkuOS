@@ -1,8 +1,12 @@
 #include "libqb.h"
 #include "common.h"
 
-#if defined(QB64_GUI) && !defined(QB64_HAIKU)
-#    include "parts/core/glew/src/glew.c"
+#ifdef QB64_GUI
+#    ifdef QB64_HAIKU
+#        include <GL/glew.h> //system GLEW, linked with -lGLEW
+#    else
+#        include "parts/core/glew/src/glew.c"
+#    endif
 #endif
 
 #ifdef QB64_WINDOWS
@@ -23,7 +27,7 @@
 #endif
 
 #ifdef QB64_HAIKU
-#    include <image.h> //get_next_image_info(), required to locate the executable
+#    include <kernel/image.h> //get_next_image_info(), required to locate the executable
 #    ifdef QB64_GUI
 #        include <Alert.h>
 #        include <Clipboard.h>
