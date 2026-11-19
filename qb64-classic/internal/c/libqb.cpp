@@ -21,11 +21,29 @@
 
 #ifdef QB64_HAIKU
     #include <image.h> //get_next_image_info(), required to locate the executable
+    #include <unistd.h>       //_exit(), used by the shutdown path
     #ifdef QB64_GUI
         #include <Alert.h>
         #include <Clipboard.h>
         #include <Message.h>
     #endif
+#endif
+
+// Haiku's libglut installs an exit handler that destroys any remaining GLUT
+// windows and calls BGLView::UnlockGL() on them. QB64 ends a program from the
+// main loop thread, while the window belongs to the thread that sits inside
+// glutMainLoop(), so that unlock trips Haiku's "UnlockGL called without LockGL"
+// debugger() and the program dies with a crash report after a perfectly normal
+// END. Flush and terminate without running the exit handlers instead; the
+// kernel reclaims the rest of the address space.
+#if defined(QB64_HAIKU) && defined(QB64_GUI)
+static void qb64_haiku_quit(int32 code) {
+    fflush(NULL);
+    _exit(code);
+}
+#    define QB64_QUIT(code) qb64_haiku_quit(code)
+#else
+#    define QB64_QUIT(code) exit(code)
 #endif
 
 int32 disableEvents=0;
@@ -5268,11 +5286,11 @@ void cpu_call(){
     i2=i&15; if (i2<=9) i2+=48; else i2=i2-10+65;
     unknown_opcode_mess->chr[17]=i2;
     MessageBox2(NULL,(char*)unknown_opcode_mess->chr,"X86 Error",MB_OK|MB_SYSTEMMODAL);
-    exit(86);
+    QB64_QUIT(86);
     done:
     if (*ip) goto next_opcode;
     
-    exit(cmem[0]);
+    QB64_QUIT(cmem[0]);
     
 }
 
@@ -5555,17 +5573,17 @@ void fix_error(){
         
         len = snprintf(errmess, 0, FIXERRMSG_BODY, (inclercl ? inclercl : ercl), (inclercl ? includedfilename : FIXERRMSG_MAINFILE), cp, (!prevent_handling ? FIXERRMSG_CONT : ""));
         errmess = (char*)malloc(len + 1);
-        if (!errmess) exit(0); //At this point we just give up
+        if (!errmess) QB64_QUIT(0); //At this point we just give up
         snprintf(errmess, len + 1, FIXERRMSG_BODY, (inclercl ? inclercl : ercl), (inclercl ? includedfilename : FIXERRMSG_MAINFILE), cp, (!prevent_handling ? FIXERRMSG_CONT : ""));
         
         len = snprintf(errtitle, 0, FIXERRMSG_TITLE, (!prevent_handling ? FIXERRMSG_UNHAND : FIXERRMSG_CRIT), new_error, binary_name->chr);
         errtitle = (char*)malloc(len + 1);
-        if (!errtitle) exit(0); //At this point we just give up
+        if (!errtitle) QB64_QUIT(0); //At this point we just give up
         snprintf(errtitle, len + 1, FIXERRMSG_TITLE, (!prevent_handling ? FIXERRMSG_UNHAND : FIXERRMSG_CRIT), new_error, binary_name->chr);
         
         if (prevent_handling){
             v=MessageBox2(NULL,errmess,errtitle,MB_OK);
-            exit(0);
+            QB64_QUIT(0);
             }else{
             v=MessageBox2(NULL,errmess,errtitle,MB_YESNO|MB_SYSTEMMODAL);
         }
@@ -5589,35 +5607,35 @@ void error(int32 error_number){
     //critical errors:
     
     //out of memory errors
-    if (error_number==257){MessageBox2(NULL,"Out of memory","Critical Error #1",MB_OK|MB_SYSTEMMODAL); exit(0);}//generic "Out of memory" error
+    if (error_number==257){MessageBox2(NULL,"Out of memory","Critical Error #1",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}//generic "Out of memory" error
     //tracable "Out of memory" errors
-    if (error_number==502){MessageBox2(NULL,"Out of memory","Critical Error #2",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==503){MessageBox2(NULL,"Out of memory","Critical Error #3",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==504){MessageBox2(NULL,"Out of memory","Critical Error #4",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==505){MessageBox2(NULL,"Out of memory","Critical Error #5",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==506){MessageBox2(NULL,"Out of memory","Critical Error #6",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==507){MessageBox2(NULL,"Out of memory","Critical Error #7",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==508){MessageBox2(NULL,"Out of memory","Critical Error #8",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==509){MessageBox2(NULL,"Out of memory","Critical Error #9",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==510){MessageBox2(NULL,"Out of memory","Critical Error #10",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==511){MessageBox2(NULL,"Out of memory","Critical Error #11",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==512){MessageBox2(NULL,"Out of memory","Critical Error #12",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==513){MessageBox2(NULL,"Out of memory","Critical Error #13",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==514){MessageBox2(NULL,"Out of memory","Critical Error #14",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==515){MessageBox2(NULL,"Out of memory","Critical Error #15",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==516){MessageBox2(NULL,"Out of memory","Critical Error #16",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==517){MessageBox2(NULL,"Out of memory","Critical Error #17",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==518){MessageBox2(NULL,"Out of memory","Critical Error #18",MB_OK|MB_SYSTEMMODAL); exit(0);}
+    if (error_number==502){MessageBox2(NULL,"Out of memory","Critical Error #2",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==503){MessageBox2(NULL,"Out of memory","Critical Error #3",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==504){MessageBox2(NULL,"Out of memory","Critical Error #4",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==505){MessageBox2(NULL,"Out of memory","Critical Error #5",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==506){MessageBox2(NULL,"Out of memory","Critical Error #6",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==507){MessageBox2(NULL,"Out of memory","Critical Error #7",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==508){MessageBox2(NULL,"Out of memory","Critical Error #8",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==509){MessageBox2(NULL,"Out of memory","Critical Error #9",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==510){MessageBox2(NULL,"Out of memory","Critical Error #10",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==511){MessageBox2(NULL,"Out of memory","Critical Error #11",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==512){MessageBox2(NULL,"Out of memory","Critical Error #12",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==513){MessageBox2(NULL,"Out of memory","Critical Error #13",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==514){MessageBox2(NULL,"Out of memory","Critical Error #14",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==515){MessageBox2(NULL,"Out of memory","Critical Error #15",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==516){MessageBox2(NULL,"Out of memory","Critical Error #16",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==517){MessageBox2(NULL,"Out of memory","Critical Error #17",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==518){MessageBox2(NULL,"Out of memory","Critical Error #18",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
     
     //other critical errors
-    if (error_number==11){MessageBox2(NULL,"Division by zero","Critical Error",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==256){MessageBox2(NULL,"Out of stack space","Critical Error",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==259){MessageBox2(NULL,"Cannot find dynamic library file","Critical Error",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==260){MessageBox2(NULL,"Sub/Function does not exist in dynamic library","Critical Error",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==261){MessageBox2(NULL,"Sub/Function does not exist in dynamic library","Critical Error",MB_OK|MB_SYSTEMMODAL); exit(0);}
+    if (error_number==11){MessageBox2(NULL,"Division by zero","Critical Error",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==256){MessageBox2(NULL,"Out of stack space","Critical Error",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==259){MessageBox2(NULL,"Cannot find dynamic library file","Critical Error",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==260){MessageBox2(NULL,"Sub/Function does not exist in dynamic library","Critical Error",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==261){MessageBox2(NULL,"Sub/Function does not exist in dynamic library","Critical Error",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
     
-    if (error_number==270){MessageBox2(NULL,"_GL command called outside of SUB _GL's scope","Critical Error",MB_OK|MB_SYSTEMMODAL); exit(0);}
-    if (error_number==271){MessageBox2(NULL,"END/SYSTEM called within SUB _GL's scope","Critical Error",MB_OK|MB_SYSTEMMODAL); exit(0);}
+    if (error_number==270){MessageBox2(NULL,"_GL command called outside of SUB _GL's scope","Critical Error",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
+    if (error_number==271){MessageBox2(NULL,"END/SYSTEM called within SUB _GL's scope","Critical Error",MB_OK|MB_SYSTEMMODAL); QB64_QUIT(0);}
     
     
     if (!new_error){
@@ -20069,7 +20087,7 @@ void sub_put2(int32 i,int64 offset,void *element,int32 passed){
                 }
             close_program=1;
             end();
-            exit(0);//<-- should never happen
+            QB64_QUIT(0);//<-- should never happen
         }
         
         uint8 pu_dig[1024];//digits (left justified)
@@ -20819,7 +20837,7 @@ void sub_put2(int32 i,int64 offset,void *element,int32 passed){
             run_exit:
             close_program=1;
             end();
-            exit(99);//<--this line should never actually be executed
+            QB64_QUIT(99);//<--this line should never actually be executed
             
         }
         
@@ -25049,16 +25067,16 @@ void sub_put2(int32 i,int64 offset,void *element,int32 passed){
             static int32 i;
             static gfs_file_struct *gfs;
             i=fileno;
-            if (i<0){exit(7701);}//bad file mode (TCP/IP exclusion)
-            if (gfs_fileno_valid(i)!=1){exit(7702);}//Bad file name or number
+            if (i<0){QB64_QUIT(7701);}//bad file mode (TCP/IP exclusion)
+            if (gfs_fileno_valid(i)!=1){QB64_QUIT(7702);}//Bad file name or number
             i=gfs_fileno[i];//convert fileno to gfs index
             gfs=&gfs_file[i];
-            if (gfs->type!=1){exit(7703);}//Bad file mode (note: must have RANDOM access)
+            if (gfs->type!=1){QB64_QUIT(7703);}//Bad file mode (note: must have RANDOM access)
             
             static qbs *str;
             for (i=0;i<gfs->field_strings_n;i++){
                 str=gfs->field_strings[i];
-                if (!str) exit(7704);
+                if (!str) QB64_QUIT(7704);
                 
                 //fix length if necessary
                 if (str->len!=str->field->size){
@@ -27848,7 +27866,7 @@ int main( int argc, char* argv[] ){
         //normally MAIN_LOOP() is launched in a separate thread to reserve the primary thread for GLUT
         //that is not required, so run MAIN_LOOP() in our primary thread
         MAIN_LOOP();
-        exit(0);
+        QB64_QUIT(0);
     #endif    
     
     #ifdef QB64_WINDOWS
@@ -27994,7 +28012,7 @@ int main( int argc, char* argv[] ){
         
         if (!glutGet(GLUT_DISPLAY_MODE_POSSIBLE))//must be called on Linux or GLUT crashes
         { 
-            exit(1);
+            QB64_QUIT(1);
         }
         
         if (!window_title){
@@ -28206,7 +28224,7 @@ sub_close(NULL,0);
 
 snd_un_init();
 
-exit(exit_code);
+QB64_QUIT(exit_code);
 }
 
 
