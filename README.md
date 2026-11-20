@@ -85,6 +85,26 @@ following command-line calls:
 When doing this, QB64 really appreciates getting the entire pathname. This can
 be done easily by dragging the .bas file into the Terminal window.
 
+# Cleaning up
+
+QB64 takes a lock on `internal/temp` for every compile. If the IDE crashed or a
+program was killed, the lock survives, so the next compile gets a new folder -
+`internal/temp2`, `temp3` and so on, with a matching copy of `qbx.cpp` in
+`internal/c`. On Windows, `qb64pe/internal/clean.bat` removes those again. On
+Haiku, run the bash equivalent from the repository root:
+
+```bash
+./clean_qb64.sh          # both trees, asks first
+./clean_qb64.sh -n       # dry run: only show what would go
+./clean_qb64.sh -y pe    # just qb64pe, no questions
+```
+
+It deletes `internal/temp`, `internal/temp<N>`, the `internal/c/qbx<N>.cpp`
+copies and the `*.o`/`*.a`/`*.sym` files from earlier compiles, then recreates
+`internal/temp/temp.bin`. The `qb64` and `qb64pe` executables and the compiler
+sources in `internal/source` are left untouched; run `./setup_haiku.sh` again
+only if you want the compiler executable itself rebuilt.
+
 # What is different on Haiku
 
 * Menu shortcuts are the ones each tree ships with; nothing in the keyboard
